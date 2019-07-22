@@ -15,9 +15,9 @@
    <top>
       <AnchorPane onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #349DB5;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="200.0" layoutY="20.0" text="Маҳсулот турини қўшиш" textFill="WHITE">
+            <Label layoutX="188.0" layoutY="19.0" text="Маҳсулот турини қўшиш" textFill="WHITE">
                <font>
-                  <Font name="Century Gothic" size="16.0" />
+                  <Font name="Century Gothic Bold" size="18.0" />
                </font>
             </Label>
          </children>
@@ -28,18 +28,18 @@
          <children>
             <JFXButton fx:id="cancelBtn" layoutX="475.0" layoutY="15.0" onAction="#handleCancel" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #F08080;" text="Ортга" textFill="WHITE">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="Arial" size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="1.2em" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="1.3em" />
                </graphic>
             </JFXButton>
             <JFXButton fx:id="addBtn" layoutX="365.0" layoutY="15.0" onAction="#handleCreate" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #78C778;" text="Қўшиш" textFill="WHITE">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="Arial" size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="1.2em" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="1.3em" />
                </graphic>
             </JFXButton>
          </children>
@@ -57,12 +57,11 @@
          <children>
             <JFXTextField fx:id="productTypeField" focusColor="WHITE" styleClass="textfield" unFocusColor="WHITE" GridPane.columnIndex="1">
                <font>
-                  <Font size="13.0" />
-               </font>
-            </JFXTextField>
+                  <Font name="Century Gothic" size="17.0" />
+               </font></JFXTextField>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури номи: " textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <font>
-                  <Font name="Century Gothic" size="14.0" />
+                  <Font name="Century Gothic" size="17.0" />
                </font>
             </Label>
          </children>

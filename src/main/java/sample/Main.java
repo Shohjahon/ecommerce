@@ -31,7 +31,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/fxml/index.fxml"));
         Parent root = loader.load();
         final Controller controller = loader.getController();
-        Scene scene = new Scene(root,900,600);
+        Scene scene = new Scene(root,1300,800);
         StageStyle style = StageStyle.TRANSPARENT;
         primaryStage.setScene(scene);
         primaryStage.initStyle(style);

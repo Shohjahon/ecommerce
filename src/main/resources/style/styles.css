@@ -2,6 +2,8 @@
     -fx-background-color:  #277688;
     -fx-border-width:  2px 0 0 0;
     -fx-border-color: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
 }
 .list-item:hover{
     -fx-background-color: #36A5BE;
@@ -10,8 +12,6 @@
 
 .text_field{
     -fx-text-fill: white;
-    -fx-border-width:  0 0 0 1px;
-    -fx-border-color: white;
     -fx-prompt-text-fill: white;
 }
 
@@ -20,6 +20,43 @@
     -fx-prompt-text-fill: white;
 }
 
-.combo-box-base .text{
-    -fx-fill: white;
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:16px;
+    -fx-font-family: fantasy;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #39ADC7;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2ba8bc;
+}
+
+.table-view .column-header-background .label{
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+.jfx-combo-box {
+    -fx-text-inner-color: #39ADC7;
+    -fx-prompt-text-fill: white;
+}
+
+.jfx-combo-box .cell {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: "Century Gothic";
+}
+
+.text-area {
+    text-area-background: #346F7C;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: "Century Gothic";
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+    -fx-text-fill: white;
 }

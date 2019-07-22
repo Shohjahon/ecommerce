@@ -4,10 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -24,9 +22,7 @@ import sample.model.ProductType;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -66,7 +62,11 @@ public class ProductTypeController implements Initializable , DispatcherControll
     public void initialize(URL location, ResourceBundle resources) {
         colProductTypeId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colProductTypeName.setCellValueFactory(new PropertyValueFactory<>("productType"));
+
         product_type_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        colProductTypeId.setMaxWidth(1f*Integer.MAX_VALUE * 20);
+        colProductTypeName.setMaxWidth(1f*Integer.MAX_VALUE * 50);
+        colAction.setMaxWidth(1f*Integer.MAX_VALUE * 30);
 
         Callback<TableColumn<ProductType,String>,TableCell<ProductType,String>> cellFactory = (param) -> {
             final TableCell<ProductType,String> cell = new TableCell<ProductType,String>(){
@@ -78,7 +78,7 @@ public class ProductTypeController implements Initializable , DispatcherControll
                         setText(null);
                     }else {
                         final JFXButton edit = new JFXButton("Таҳрирлаш");
-                        edit.setStyle("-fx-background-color: #3399ff;" +
+                        edit.setStyle("-fx-background-color: #86C775;" +
                                 "-fx-text-fill: white;" +
                                 "-fx-min-width: 70px;");
                         final JFXButton delete = new JFXButton("Ўчириш");
@@ -92,8 +92,14 @@ public class ProductTypeController implements Initializable , DispatcherControll
                         delete.setOnAction(event->{
                             ProductType productType = product_type_table.getItems().get(getIndex());
                             try {
-                                productTypeDao.deleteProductTypeById(productType.getId());
-                                list.remove(productType);
+                                boolean confirm = AlertUtil.showConfirmBox(Alert.AlertType.CONFIRMATION,
+                                        "Ўчириш",
+                                        "Маҳсулот турини ўчириш",
+                                        "Ушбу маҳсулот турини ўчиришни ҳоҳлайсизми?");
+                                if (confirm){
+                                    productTypeDao.deleteProductTypeById(productType.getId());
+                                    list.remove(productType);
+                                }
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -108,7 +114,9 @@ public class ProductTypeController implements Initializable , DispatcherControll
             };
             return cell;
         };
+
         colAction.setCellFactory(cellFactory);
+
         populateTableView();
     }
 

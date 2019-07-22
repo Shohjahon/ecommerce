@@ -2404,87 +2404,91 @@
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="545" parent="56" name="fk_product_type_key">
+    <column id="545" parent="56" name="description">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <index id="546" parent="56" name="fk_product_type_key">
       <ColNames>id_product_type</ColNames>
     </index>
-    <key id="546" parent="56" name="PRIMARY">
+    <key id="547" parent="56" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="547" parent="56" name="fk_product_type_key">
+    <foreign-key id="548" parent="56" name="fk_product_type_key">
       <ColNames>id_product_type</ColNames>
       <RefSchemaName>ecommerce</RefSchemaName>
       <RefTableName>product_types</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="548" parent="57" name="id">
+    <column id="549" parent="57" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="549" parent="57" name="id_product">
+    <column id="550" parent="57" name="id_product">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="550" parent="57" name="id_salesman">
+    <column id="551" parent="57" name="id_salesman">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="551" parent="57" name="input_price">
+    <column id="552" parent="57" name="input_price">
       <Position>4</Position>
       <DataType>double|0</DataType>
     </column>
-    <column id="552" parent="57" name="output_price">
+    <column id="553" parent="57" name="output_price">
       <Position>5</Position>
       <DataType>double|0</DataType>
     </column>
-    <index id="553" parent="57" name="fk_id_product">
+    <index id="554" parent="57" name="fk_id_product">
       <ColNames>id_product</ColNames>
     </index>
-    <index id="554" parent="57" name="fk_id_salesman">
+    <index id="555" parent="57" name="fk_id_salesman">
       <ColNames>id_salesman</ColNames>
     </index>
-    <key id="555" parent="57" name="PRIMARY">
+    <key id="556" parent="57" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="556" parent="57" name="fk_id_product">
+    <foreign-key id="557" parent="57" name="fk_id_product">
       <ColNames>id_product</ColNames>
       <RefSchemaName>ecommerce</RefSchemaName>
       <RefTableName>products</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="557" parent="57" name="fk_id_salesman">
+    <foreign-key id="558" parent="57" name="fk_id_salesman">
       <ColNames>id_salesman</ColNames>
       <RefSchemaName>ecommerce</RefSchemaName>
       <RefTableName>salesman</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="558" parent="58" name="id">
+    <column id="559" parent="58" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="559" parent="58" name="full_name">
+    <column id="560" parent="58" name="full_name">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="560" parent="58" name="phone_number">
+    <column id="561" parent="58" name="phone_number">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="561" parent="58" name="address">
+    <column id="562" parent="58" name="address">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <key id="562" parent="58" name="PRIMARY">
+    <key id="563" parent="58" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

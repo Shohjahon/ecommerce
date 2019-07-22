@@ -31,7 +31,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
             statement.setInt(1,id);
             try (ResultSet result = statement.executeQuery()){
                 if (result.next()){
-                    productType = new ProductType(result.getString("create"));
+                    productType = new ProductType(result.getString("product_type"));
                     productType.setId(result.getInt("id"));
                 }
             }

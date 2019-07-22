@@ -56,8 +56,9 @@ public class Controller  implements Initializable{
     private JFXButton toExcelBtn;
     private List<JFXButton> btnList;
     private String selectedView;
-    private ProductTypeController productTypeController;
-    private CreateProductTypeController createProductTypeController;
+//    private ProductTypeController productTypeController;
+//    private CreateProductTypeController createProductTypeController;
+    private DispatcherController dispatcherController;
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -83,10 +84,6 @@ public class Controller  implements Initializable{
         stage.setIconified(true);
     }
 
-    @FXML
-    private void clear(){
-        this.container.setCenter(null);
-    }
 
     @FXML
     public void loadProducts(){
@@ -138,13 +135,11 @@ public class Controller  implements Initializable{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/" + ui + ".fxml"));
             root = loader.load();
             switch (ui){
-                case "product_type": {
-                    FXMLLoader createProductTypeLoader = new FXMLLoader(getClass().getResource("/fxml/create/create_product_type.fxml"));
-                    Parent parent = createProductTypeLoader.load();
-                    createProductTypeController = createProductTypeLoader.getController();
-                    productTypeController.setStage(stage);
-                } break;
+                case "product_type": selectedView = "create_product_type"; break;
+                case "product": selectedView = "create_product"; break;
+
             }
+            dispatcherController.setStage(stage);
             new FadeIn(root).play();
         } catch (IOException e) {
            e.printStackTrace();
@@ -177,7 +172,7 @@ public class Controller  implements Initializable{
         FXMLLoader productTypeLoader = new FXMLLoader(getClass().getResource("/fxml/product_type.fxml"));
         try {
             Parent parent = productTypeLoader.load();
-            productTypeController = productTypeLoader.getController();
+            dispatcherController = productTypeLoader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -189,42 +184,30 @@ public class Controller  implements Initializable{
 
     @FXML
     public void handleCreates() {
-        switch (selectedView){
-            case "product": showCreate("create_product"); break;
-            case "product_type": showCreate("create_product_type"); break;
-            case "detailed": showCreate("create_detailed"); break;
-        }
+        showCreate(selectedView);
     }
 
 
     private void showCreate(String createUi){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/create/"+createUi+".fxml"));
         try {
-            Parent root = loader.load();
-            DispatcherController controller = null;
-            CreateProductTypeController createProductTypeController = null;
-            switch (createUi){
-                case "create_product_type": {
-                    createProductTypeController = loader.getController();
-                } break;
-
-                case "create_detailed": {
-
-                } break;
-
-                default:{
-
+                Parent root = loader.load();
+                dispatcherController = loader.getController();
+                Scene scene = null;
+                switch (createUi){
+                    case "create_product": scene = new Scene(root, 600, 500); break;
+                    case "create_product_type": scene = new Scene(root, 600, 400);break;
                 }
-            }
 
-            Scene scene = new Scene(root,600,400);
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setScene(scene);
-            StageStyle style = StageStyle.TRANSPARENT;
-            stage.initStyle(style);
-            createProductTypeController.setStage(stage);
-            stage.showAndWait();
+
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setScene(scene);
+                StageStyle style = StageStyle.TRANSPARENT;
+                stage.initStyle(style);
+                dispatcherController.setStage(stage);
+                stage.showAndWait();
+
         } catch (IOException e) {
             e.printStackTrace();
             AlertUtil.showAlert(Alert.AlertType.ERROR,
