@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="product_type_table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ProductTypeController">
+  <columns>
+    <TableColumn fx:id="colProductTypeId" maxWidth="75.0" prefWidth="75.0" text="ID" />
+    <TableColumn fx:id="colProductTypeName" maxWidth="367.0" minWidth="0.0" prefWidth="367.0" text="Маҳсулот тури номи" />
+      <TableColumn fx:id="colAction" maxWidth="347.0" minWidth="0.0" prefWidth="157.0" text="Маҳсулот тури билан ишлаш" />
+  </columns>
+</TableView>

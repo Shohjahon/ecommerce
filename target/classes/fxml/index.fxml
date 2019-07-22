@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F0F0F0;" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <top>
+      <HBox alignment="CENTER_RIGHT" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="10.0" prefWidth="600.0" style="-fx-background-color: #dfe4ea;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="#48dbfb" glyphName="MINUS" onMouseClicked="#min" size="1.2em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#1dd1a1" glyphName="CIRCLE" onMouseClicked="#max" size="1.2em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#ee5253" glyphName="CLOSE" onMouseClicked="#close" size="1.2em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="565.0" prefWidth="162.0" style="-fx-background-color: #277688;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Commerce">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="25.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="product_btn" alignment="BASELINE_LEFT" onAction="#loadProducts" prefHeight="50.0" prefWidth="162.0" styleClass="list-item" text="Маҳсулотлар" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="QRCODE" size="1.7em" styleClass="list-item" wrappingWidth="20.0" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="prod_type_btn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="63.0" onAction="#loadProductType" prefHeight="50.0" prefWidth="162.0" styleClass="list-item" text="Маҳсулот тури" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TAGS" size="1.6em" wrappingWidth="20.0" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="salesman_btn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="113.0" onAction="#loadSalesman" prefHeight="50.0" prefWidth="162.0" styleClass="list-item" text="Сотувчилар" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="1.6em" wrappingWidth="20.0" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="attachment_btn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="163.0" onAction="#loadDetailed" prefHeight="50.0" prefWidth="162.0" style="-fx-border-width: 2px 0 2px 0;" styleClass="list-item" text="Ҳисобот" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILE_ALT" size="1.6em" wrappingWidth="20.0" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane fx:id="container" prefHeight="200.0" prefWidth="738.0" styleClass="main" stylesheets="@../style/styles.css" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="738.0" style="-fx-background-color: #277688;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="216.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="add_btn" onAction="#handleCreates" style="-fx-background-color: #3399ff;" text="Қўшиш" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="1.2em" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <JFXButton fx:id="toExcelBtn" prefWidth="150.0" style="-fx-background-color: #40D5A3;" text="Excel га ўтказиш" textFill="WHITE" wrapText="true">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOUD_DOWNLOAD" size="1.2em" wrappingWidth="20.0" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Unicode MS" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXComboBox prefHeight="25.0" prefWidth="170.0" promptText="Филтер" styleClass="combo_box" visibleRowCount="5" />
+                  <JFXTextField focusColor="WHITE" maxWidth="180.0" minWidth="180.0" prefHeight="31.0" prefWidth="180.0" promptText="Қидириш" styleClass="text_field" stylesheets="@../style/styles.css" unFocusColor="#fffafa">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CreateProductTypeController">
+   <top>
+      <AnchorPane onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #349DB5;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="200.0" layoutY="20.0" text="Маҳсулот турини қўшиш" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #349DB5;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="cancelBtn" layoutX="475.0" layoutY="15.0" onAction="#handleCancel" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #F08080;" text="Ортга" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="1.2em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="addBtn" layoutX="365.0" layoutY="15.0" onAction="#handleCreate" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #78C778;" text="Қўшиш" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="1.2em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <GridPane alignment="CENTER" style="-fx-background-color: #377482;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.3333740234375" minWidth="10.0" prefWidth="212.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.33331298828125" minWidth="10.0" prefWidth="387.33331298828125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTextField fx:id="productTypeField" focusColor="WHITE" styleClass="textfield" unFocusColor="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури номи: " textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

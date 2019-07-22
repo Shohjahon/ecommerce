@@ -1,0 +1,25 @@
+.list-item{
+    -fx-background-color:  #277688;
+    -fx-border-width:  2px 0 0 0;
+    -fx-border-color: white;
+}
+.list-item:hover{
+    -fx-background-color: #36A5BE;
+    -fx-cursor: hand;
+}
+
+.text_field{
+    -fx-text-fill: white;
+    -fx-border-width:  0 0 0 1px;
+    -fx-border-color: white;
+    -fx-prompt-text-fill: white;
+}
+
+.textfield{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+.combo-box-base .text{
+    -fx-fill: white;
+}
