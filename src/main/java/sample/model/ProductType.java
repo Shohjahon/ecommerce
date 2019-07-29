@@ -45,9 +45,6 @@ public class ProductType {
 
     @Override
     public String toString() {
-        return "ProductType{" +
-                "id=" + id +
-                ", productType=" + productType +
-                '}';
+        return productType.getValue();
     }
 }

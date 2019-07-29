@@ -28,7 +28,7 @@ import java.util.ResourceBundle;
 /**
  * Shoh Jahon tomonidan 6/28/2019 da qo'shilgan.
  */
-public class CreateProductTypeController implements Initializable,DispatcherController {
+public class CreateProductTypeController implements Initializable,DispatcherController<ProductType> {
     private Stage stage;
     private double dragAnchorY;
     private double dragAnchorX;
@@ -56,6 +56,11 @@ public class CreateProductTypeController implements Initializable,DispatcherCont
     @Override
     public void setStage(Stage stage){
         this.stage = stage;
+    }
+
+    @Override
+    public void setData(ObservableList<ProductType> list, ProductType dto, int index) {
+
     }
 
     public void setProductTypes(ObservableList<ProductType> productTypes) {

@@ -17,11 +17,36 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
     private final String DELETE_SQL = "DELETE FROM product_types WHERE id = ?";
     private final String SELECT_ONE_SQL = "SELECT * FROM product_types WHERE id = ?";
     private final String SELECT_ALL_SQL = "SELECT * FROM product_types";
+    private final String SELECT_BY_NAME_SQL = "SELECT * FROM product_types WHERE product_type LIKE ? LIMIT 1";
 
     public ProductTypeDaoImpl(Connection connection) {
         this.connection = connection;
     }
 
+
+    @Override
+    public ProductType findProductTypeByType(String type) throws Exception {
+        System.out.println("real product type due to saving ... " + type);
+        ProductType productType = null;
+        try (PreparedStatement statement = connection.prepareStatement(SELECT_BY_NAME_SQL)){
+            connection.setAutoCommit(false);
+            statement.setNString(1,type);
+            try (ResultSet result = statement.executeQuery()){
+                if (result.next()){
+                    productType = new ProductType(result.getString("product_type"));
+                    productType.setId(result.getInt("id"));
+                }
+            }
+            connection.commit();
+        }catch (SQLException ex){
+            connection.rollback();
+            throw new Exception(ex.getMessage());
+        }finally {
+            System.out.println("found product type by name: " + productType);
+            connection.setAutoCommit(true);
+            return productType;
+        }
+    }
 
     @Override
     public ProductType findProductTypeById(Integer id) throws Exception {
@@ -64,7 +89,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
     public void insetProductType(ProductType productType) throws Exception {
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
             connection.setAutoCommit(false);
-            statement.setString(1,productType.getProductType());
+            statement.setNString(1,productType.getProductType());
             statement.executeUpdate();
             connection.commit();
         }catch (SQLException ex){
@@ -97,7 +122,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
     public void updateProductType(ProductType productType) throws Exception {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_SQL)){
             connection.setAutoCommit(false);
-            statement.setString(1,productType.getProductType());
+            statement.setNString(1,productType.getProductType());
             statement.setInt(2,productType.getId());
             statement.executeUpdate();
             connection.commit();

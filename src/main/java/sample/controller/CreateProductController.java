@@ -16,6 +16,7 @@ import sample.dao.ProductTypeDao;
 import sample.inteface.DispatcherController;
 import sample.model.Product;
 import sample.model.ProductType;
+import sample.model.dto.ProductDto;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
 
@@ -26,7 +27,7 @@ import java.util.ResourceBundle;
 /**
  * Shoh Jahon tomonidan 7/22/2019 da qo'shilgan.
  */
-public class CreateProductController implements Initializable,DispatcherController{
+public class CreateProductController implements Initializable,DispatcherController<ProductDto>{
     private Stage stage;
     @FXML
     private JFXButton cancelBtn;
@@ -63,6 +64,11 @@ public class CreateProductController implements Initializable,DispatcherControll
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    @Override
+    public void setData(ObservableList<ProductDto> list, ProductDto dto, int index) {
+
     }
 
     @FXML

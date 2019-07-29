@@ -70,10 +70,11 @@ public class ProductDaoImpl implements ProductDao{
     @Override
     public void insertProduct(Product product) throws Exception {
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
+            System.out.println("saving product..... -> " + product);
             connection.setAutoCommit(false);
-            statement.setString(1,product.getProductName());
+            statement.setNString(1,product.getProductName());
             statement.setInt(2,product.getProductType().getId());
-            statement.setString(3,product.getDescription());
+            statement.setNString(3,product.getDescription());
             statement.executeUpdate();
             connection.commit();
         }catch (SQLException ex){
@@ -88,10 +89,9 @@ public class ProductDaoImpl implements ProductDao{
     public void updateProduct(Product product) throws Exception {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_SQL)){
             connection.setAutoCommit(false);
-            statement.setString(1,product.getProductName());
-            statement.setInt(2,productTypeDao.
-                    findProductTypeById(product.getProductType().getId()).getId());
-            statement.setString(3,product.getDescription());
+            statement.setNString(1,product.getProductName());
+            statement.setInt(2,product.getProductType().getId());
+            statement.setNString(3,product.getDescription());
             statement.setInt(4,product.getId());
             statement.executeUpdate();
             connection.commit();

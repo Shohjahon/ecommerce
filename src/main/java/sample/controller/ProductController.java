@@ -1,34 +1,43 @@
 package sample.controller;
 
+import animatefx.animation.*;
 import com.jfoenix.controls.JFXButton;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import sample.dao.ProductDao;
 import sample.inteface.DispatcherController;
 import sample.model.Product;
 import sample.model.dto.ProductDto;
 import sample.utility.AlertUtil;
+import sample.utility.ControllerUtil;
 import sample.utility.DatabaseUtil;
 
 import javax.xml.crypto.Data;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
  * Shoh Jahon tomonidan 7/22/2019 da qo'shilgan.
  */
-public class ProductController implements Initializable,DispatcherController {
+public class ProductController implements Initializable,DispatcherController<ProductDto> {
     private Stage stage;
     @FXML
     private TableView<ProductDto> product_table;
@@ -46,6 +55,7 @@ public class ProductController implements Initializable,DispatcherController {
     private ProductDao productDao;
     private ObservableList<ProductDto> list;
     private static ProductController INSTANCE;
+    private UpdateProductController updateProductController;
 
     public ProductController(){
         INSTANCE =this;
@@ -86,8 +96,22 @@ public class ProductController implements Initializable,DispatcherController {
                       delete.setStyle("-fx-background-color: #ff3333;" +
                               "-fx-text-fill: white;" +
                               "-fx-min-width: 70px");
-                      edit.setOnAction(event->{
 
+                      edit.setOnAction(event->{
+                          ProductDto product = product_table.getItems().get(getIndex());
+                          try {
+                              ControllerUtil controllerUtil = new ControllerUtil(
+                                      "/fxml/update/update_product.fxml",
+                                      600,500,list,product,getIndex());
+                              controllerUtil.showWindow();
+                          } catch (IOException e) {
+                              e.printStackTrace();
+                              AlertUtil.showAlert(Alert.AlertType.ERROR,
+                                      "Хатолик",
+                                      "Хатолик юз берди! ",
+                                      "Дастур   боғлиқ хатолик юз берди!  \n" +
+                                              "Илтимос дастур администратори билан боғланинг! ");
+                          }
                       });
                       delete.setOnAction(event -> {
                           ProductDto productDto = product_table.getItems().get(getIndex());
@@ -145,5 +169,10 @@ public class ProductController implements Initializable,DispatcherController {
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    @Override
+    public void setData(ObservableList<ProductDto> list, ProductDto dto, int index) {
+
     }
 }

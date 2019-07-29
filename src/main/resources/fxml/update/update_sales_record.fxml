@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" stylesheets="@../../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UpdateSalesRecordController">
+    <top>
+        <AnchorPane onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #349DB5;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="206.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Янги ҳисобот қўшиш">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </top>
+    <bottom>
+        <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #349DB5;" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="addBtn" layoutX="288.0" layoutY="15.0" onAction="#handleUpdateSalesRecord" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #78C778;" text="Ўзгартириш" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="1.3em" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="cancelBtn" layoutX="437.0" layoutY="15.0" onAction="#handleCancel" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #F08080;" text="Ортга" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="1.3em" />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </bottom>
+    <center>
+        <GridPane style="-fx-background-color: #377482;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="217.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="229.0" text="Маҳсулот номи: " textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="226.0" text="Кимдан олинган:" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+                <JFXComboBox fx:id="salesmanBox" prefHeight="32.0" prefWidth="392.0" promptText="Кимдан олинганлигини танланг" stylesheets="@../../style/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin></JFXComboBox>
+                <JFXComboBox fx:id="productBox" prefHeight="32.0" prefWidth="385.0" promptText="Маҳсулот танланг" stylesheets="@../../style/styles.css" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin></JFXComboBox>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="225.0" text="Сана:" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+                <JFXDatePicker fx:id="dateDetailPicker" defaultColor="#02e5b3" prefHeight="37.0" prefWidth="386.0" promptText="Санани танланг" stylesheets="@../../style/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin></JFXDatePicker>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="219.0" text="Келиш нархи: " textFill="WHITE" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+                <JFXTextField fx:id="inDetailField" focusColor="WHITE" promptText="Келиш нархини киритинг" styleClass="textfield" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin>
+                </JFXTextField>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="219.0" text="Сотилиш нархи: " textFill="WHITE" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Label>
+                <JFXTextField fx:id="outDetailField" focusColor="WHITE" promptText="Сотилиш нархини киритинг" styleClass="textfield" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin>
+                </JFXTextField>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

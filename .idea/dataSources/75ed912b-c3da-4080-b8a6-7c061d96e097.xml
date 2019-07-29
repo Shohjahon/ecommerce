@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ecommerce@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ecommerce">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="jobportal"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="myteacher"/>
+    <schema id="7" parent="1" name="oauth"/>
+    <schema id="8" parent="1" name="onlineshop"/>
+    <schema id="9" parent="1" name="onlineshopping"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="polling_app"/>
+    <schema id="12" parent="1" name="project"/>
+    <schema id="13" parent="1" name="securedb"/>
+    <schema id="14" parent="1" name="test"/>
+    <table id="15" parent="2" name="product_types"/>
+    <table id="16" parent="2" name="products"/>
+    <table id="17" parent="2" name="sales_records"/>
+    <table id="18" parent="2" name="salesman"/>
+    <column id="19" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="15" name="product_type">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="21" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="16" name="product_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="24" parent="16" name="id_product_type">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="25" parent="16" name="description">
+      <Position>4</Position>
+      <DataType>varchar(150)|0</DataType>
+    </column>
+    <index id="26" parent="16" name="fk_product_key">
+      <ColNames>id_product_type</ColNames>
+    </index>
+    <key id="27" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="16" name="fk_product_key">
+      <ColNames>id_product_type</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>product_types</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="29" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="17" name="id_product">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="31" parent="17" name="id_salesman">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="32" parent="17" name="input_price">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="33" parent="17" name="output_price">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="34" parent="17" name="sold_date">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="35" parent="17" name="fk_id_product">
+      <ColNames>id_product</ColNames>
+    </index>
+    <index id="36" parent="17" name="fk_id_salesman">
+      <ColNames>id_salesman</ColNames>
+    </index>
+    <key id="37" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="17" name="fk_id_product">
+      <ColNames>id_product</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="39" parent="17" name="fk_id_salesman">
+      <ColNames>id_salesman</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>salesman</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="40" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="18" name="full_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="42" parent="18" name="phone_number">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="43" parent="18" name="address">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="44" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

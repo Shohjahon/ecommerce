@@ -4,6 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import sample.model.Salesman;
 
 /**
  * Shoh Jahon tomonidan 7/22/2019 da qo'shilgan.
@@ -74,4 +75,5 @@ public class ProductDto {
                 ", description=" + description +
                 '}';
     }
+
 }

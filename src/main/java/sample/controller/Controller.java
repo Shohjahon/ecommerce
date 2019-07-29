@@ -56,8 +56,6 @@ public class Controller  implements Initializable{
     private JFXButton toExcelBtn;
     private List<JFXButton> btnList;
     private String selectedView;
-//    private ProductTypeController productTypeController;
-//    private CreateProductTypeController createProductTypeController;
     private DispatcherController dispatcherController;
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
@@ -96,9 +94,9 @@ public class Controller  implements Initializable{
     @FXML
     private void loadDetailed(){
         setDefaultColor();
-        selectedView = "detailed";
+        selectedView = "sales_record";
         this.attachment_btn.setStyle("-fx-background-color: #36A5BE;");
-        loadUI("detailed");
+        loadUI("sales_record");
     }
 
     @FXML
@@ -137,7 +135,8 @@ public class Controller  implements Initializable{
             switch (ui){
                 case "product_type": selectedView = "create_product_type"; break;
                 case "product": selectedView = "create_product"; break;
-
+                case "salesman": selectedView = "create_salesman"; break;
+                case "sales_record": selectedView = "create_sales_record"; break;
             }
             dispatcherController.setStage(stage);
             new FadeIn(root).play();
@@ -169,10 +168,10 @@ public class Controller  implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         selectedView = "product";
-        FXMLLoader productTypeLoader = new FXMLLoader(getClass().getResource("/fxml/product_type.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/product_type.fxml"));
         try {
-            Parent parent = productTypeLoader.load();
-            dispatcherController = productTypeLoader.getController();
+            Parent parent = loader.load();
+            dispatcherController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -197,6 +196,8 @@ public class Controller  implements Initializable{
                 switch (createUi){
                     case "create_product": scene = new Scene(root, 600, 500); break;
                     case "create_product_type": scene = new Scene(root, 600, 400);break;
+                    case "create_salesman": scene = new Scene(root,600,500); break;
+                    case "create_sales_record": scene = new Scene(root,600,700); break;
                 }
 
 

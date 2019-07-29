@@ -17,7 +17,7 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
     private final Connection connection;
     private ProductDao productDao;
     private SalesmanDao salesmanDao;
-    private final String INSERT_SQL = "INSERT INTO sales_records (id_product,id_salesman,input_price,output_price) VALUES (?,?,?,?)";
+    private final String INSERT_SQL = "INSERT INTO sales_records (id_product,id_salesman,input_price,output_price,sold_date) VALUES (?,?,?,?,?)";
     private final String UPDATE_SQL = "UPDATE sales_records SET  id_product=?,id_salesman=?,input_price=?,output_price=? WHERE id = ?";
     private final String DELETE_SQL = "DELETE FROM sales_records WHERE id = ?";
     private final String SELECT_ONE_SQL = "SELECT * FROM sales_records WHERE id = ?";
@@ -63,6 +63,7 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
             statement.setInt(2,salesRecord.getSalesman().getId());
             statement.setDouble(3,salesRecord.getInputPrice());
             statement.setDouble(4,salesRecord.getOutputPrice());
+            statement.setDate(5, new java.sql.Date(salesRecord.getDate().getTime()));
             statement.executeUpdate();
             connection.commit();
         }catch (SQLException ex){
@@ -119,6 +120,7 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
                     records.setSalesman(salesmanDao.findSalesmanById(rs.getInt("id_salesman")));
                     records.setInputPrice(rs.getDouble("input_price"));
                     records.setOutputPrice(rs.getDouble("output_price"));
+                    records.setDate(rs.getDate("sold_date"));
                     list.add(records);
                 }
             }

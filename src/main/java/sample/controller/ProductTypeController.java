@@ -4,15 +4,20 @@ import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,13 +27,14 @@ import sample.model.ProductType;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
  * Shoh Jahon tomonidan 6/27/2019 da qo'shilgan.
  */
-public class ProductTypeController implements Initializable , DispatcherController{
+public class ProductTypeController implements Initializable , DispatcherController<ProductType>{
     @FXML
     private TableView<ProductType> product_type_table;
     @FXML
@@ -42,6 +48,7 @@ public class ProductTypeController implements Initializable , DispatcherControll
     private Logger logger = LoggerFactory.getLogger(getClass());
     private Stage stage;
     private static ProductTypeController INSTANCE;
+    private UpdateProductTypeController updateProductTypeController;
 
 
     public ProductTypeController(){
@@ -55,6 +62,11 @@ public class ProductTypeController implements Initializable , DispatcherControll
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    @Override
+    public void setData(ObservableList<ProductType> list, ProductType dto, int index) {
+
     }
 
 
@@ -85,8 +97,30 @@ public class ProductTypeController implements Initializable , DispatcherControll
                         delete.setStyle("-fx-background-color: #ff3333;" +
                                 "-fx-text-fill: white;" +
                                 "-fx-min-width: 70px");
-                        edit.setOnAction(event->{
 
+                        edit.setOnAction(event->{
+                            ProductType productType = product_type_table.getItems().get(getIndex());
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/update/update_product_type.fxml"));
+                            try {
+                                Parent parent = loader.load();
+                                updateProductTypeController = loader.getController();
+                                updateProductTypeController.setData(list,productType,getIndex());
+                                Scene scene = new Scene(parent,600,400);
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.APPLICATION_MODAL);
+                                stage.setScene(scene);
+                                StageStyle style = StageStyle.TRANSPARENT;
+                                stage.initStyle(style);
+                                updateProductTypeController.setStage(stage);
+                                stage.showAndWait();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                                AlertUtil.showAlert(Alert.AlertType.ERROR,
+                                        "Хатолик",
+                                        "Хатолик юз берди! ",
+                                        "Дастур билан боғлиқ хатолик юз берди!  \n" +
+                                                "Илтимос дастур администратори билан боғланинг! ");
+                            }
                         });
 
                         delete.setOnAction(event->{

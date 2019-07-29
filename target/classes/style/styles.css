@@ -1,3 +1,4 @@
+
 .list-item{
     -fx-background-color:  #277688;
     -fx-border-width:  2px 0 0 0;
@@ -21,13 +22,13 @@
 }
 
 .table-view .table-cell{
-    -fx-font-weight:bold;
-    -fx-font-size:16px;
+    /*-fx-font-weight:bold;*/
+    -fx-font-size:18px;
     -fx-font-family: fantasy;
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #39ADC7;
+    -fx-background-color: #379683;
 }
 
 .table-view .column-header {
@@ -59,4 +60,12 @@
 .text-area .content {
     -fx-background-color: text-area-background ;
     -fx-text-fill: white;
+}
+
+.jfx-date-picker .text-field{
+    -jfx-unfocus-color: white;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: "Century Gothic";
 }
