@@ -53,6 +53,11 @@ public class UpdateProductTypeController implements Initializable,DispatcherCont
         this.index = index;
     }
 
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     public static UpdateProductTypeController getInstance(){
         return INSTANCE;
     }

@@ -2,6 +2,7 @@ package sample.controller;
 
 import animatefx.animation.ZoomIn;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,6 +29,7 @@ import sample.model.dto.SalesmanDto;
 import sample.utility.AlertUtil;
 import sample.utility.ControllerUtil;
 import sample.utility.DatabaseUtil;
+import sample.utility.FilterUtil;
 
 import java.io.IOException;
 import java.net.URL;
@@ -54,7 +56,8 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     private SalesmanDao salesmanDao;
     private ObservableList<SalesmanDto> list;
     private static SalesmanController INSTANCE;
-    private UpdateSalesmanController updateSalesmanController;
+    private JFXTextField filterField;
+    private FilterUtil filterUtil;
 
     public SalesmanController(){
         INSTANCE = this;
@@ -175,6 +178,13 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     @Override
     public void setData(ObservableList<SalesmanDto> list, SalesmanDto dto, int index) {
 
+    }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+        this.filterField = filterField;
+        filterUtil = new FilterUtil(this.filterField,salesman_table,list);
+        filterUtil.initFilter();
     }
 
     public static SalesmanController getInstance(){

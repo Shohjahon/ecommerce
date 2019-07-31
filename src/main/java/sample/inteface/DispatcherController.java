@@ -1,5 +1,6 @@
 package sample.inteface;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;
 import sample.controller.CreateProductTypeController;
@@ -12,4 +13,6 @@ public interface DispatcherController<T> {
     void setStage(Stage stage);
 
     void setData(ObservableList<T> list, T dto, int index);
+
+    void setFilterField(JFXTextField filterField);
 }

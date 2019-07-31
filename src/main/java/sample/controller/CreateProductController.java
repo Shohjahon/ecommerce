@@ -71,6 +71,11 @@ public class CreateProductController implements Initializable,DispatcherControll
 
     }
 
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     @FXML
     public void handleCancel(){
         stage.close();

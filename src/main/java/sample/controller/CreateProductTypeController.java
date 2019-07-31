@@ -63,6 +63,11 @@ public class CreateProductTypeController implements Initializable,DispatcherCont
 
     }
 
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     public void setProductTypes(ObservableList<ProductType> productTypes) {
         this.productTypes = productTypes;
     }

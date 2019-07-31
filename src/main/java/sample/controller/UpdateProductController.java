@@ -49,6 +49,7 @@ public class UpdateProductController implements Initializable,DispatcherControll
     @FXML
     private JFXTextArea productDescriptionField;
 
+
     public void setData(ObservableList<ProductDto> productDtos,ProductDto product, int index){
         this.productDtos = productDtos;
         this.product = product;
@@ -57,6 +58,12 @@ public class UpdateProductController implements Initializable,DispatcherControll
         productNameField.setText(product.getProductName());
         productDescriptionField.setText(product.getDescription());
     }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     @FXML
     public void handleUpdateProduct(){
         String pName = productNameField.getText();

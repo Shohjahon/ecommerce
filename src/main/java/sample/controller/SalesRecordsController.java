@@ -2,6 +2,7 @@ package sample.controller;
 
 import animatefx.animation.LightSpeedIn;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,10 +20,7 @@ import sample.dao.SalesRecordsDao;
 import sample.inteface.DispatcherController;
 import sample.model.SalesRecords;
 import sample.model.dto.SalesRecordsDto;
-import sample.utility.AlertUtil;
-import sample.utility.ControllerUtil;
-import sample.utility.DatabaseUtil;
-import sample.utility.DateTimeUtil;
+import sample.utility.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -60,6 +58,8 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     private ObservableList<SalesRecordsDto> list;
     private static SalesRecordsController INSTANCE;
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+    private FilterUtil filterUtil;
+    private JFXTextField filterField;
 
 
     @Override
@@ -213,5 +213,16 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     @Override
     public void setData(ObservableList<SalesRecordsDto> list, SalesRecordsDto dto, int index) {
 
+    }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+        this.filterField = filterField;
+        refreshFilter();
+    }
+
+    public void refreshFilter(){
+        filterUtil = new FilterUtil(this.filterField,sales_records_table,list);
+        filterUtil.initFilter();
     }
 }

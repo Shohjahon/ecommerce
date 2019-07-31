@@ -86,6 +86,7 @@ public class CreateSalesRecordController implements Initializable,DispatcherCont
                 salesRecordsController = SalesRecordsController.getInstace();
                 salesRecordsController.populateSalesRecordsTable();
                 handleCancel();
+                salesRecordsController.refreshFilter();
             } catch (Exception e) {
                 e.printStackTrace();
                 AlertUtil.showAlert(Alert.AlertType.ERROR,
@@ -136,6 +137,11 @@ public class CreateSalesRecordController implements Initializable,DispatcherCont
 
     @Override
     public void setData(ObservableList<SalesRecordsDto> list, SalesRecordsDto dto, int index) {
+
+    }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
 
     }
 

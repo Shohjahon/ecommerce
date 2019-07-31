@@ -1,6 +1,7 @@
 package sample.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -26,6 +27,7 @@ import sample.inteface.DispatcherController;
 import sample.model.ProductType;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
+import sample.utility.FilterUtil;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,6 +51,8 @@ public class ProductTypeController implements Initializable , DispatcherControll
     private Stage stage;
     private static ProductTypeController INSTANCE;
     private UpdateProductTypeController updateProductTypeController;
+    private FilterUtil filterUtil;
+    private JFXTextField filterField;
 
 
     public ProductTypeController(){
@@ -67,6 +71,13 @@ public class ProductTypeController implements Initializable , DispatcherControll
     @Override
     public void setData(ObservableList<ProductType> list, ProductType dto, int index) {
 
+    }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+        this.filterField = filterField;
+        filterUtil = new FilterUtil(this.filterField,product_type_table,list);
+        filterUtil.initFilter();
     }
 
 

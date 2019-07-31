@@ -87,6 +87,11 @@ public class UpdateSalesmanController implements Initializable,DispatcherControl
     }
 
     @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
         salesmanDao = DatabaseUtil.getSalesmanDao();
     }

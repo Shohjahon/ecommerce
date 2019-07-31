@@ -2,6 +2,8 @@ package sample.controller;
 
 import animatefx.animation.FadeIn;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +53,8 @@ public class Controller  implements Initializable{
     private JFXButton salesman_btn;
     @FXML
     private JFXButton attachment_btn;
+    @FXML
+    private JFXTextField filterField;
     @FXML
     private JFXButton add_btn;
     @FXML
@@ -138,7 +143,9 @@ public class Controller  implements Initializable{
                 case "salesman": selectedView = "create_salesman"; break;
                 case "sales_record": selectedView = "create_sales_record"; break;
             }
+            dispatcherController = loader.getController();
             dispatcherController.setStage(stage);
+            dispatcherController.setFilterField(filterField);
             new FadeIn(root).play();
         } catch (IOException e) {
            e.printStackTrace();
@@ -168,14 +175,6 @@ public class Controller  implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         selectedView = "product";
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/product_type.fxml"));
-        try {
-            Parent parent = loader.load();
-            dispatcherController = loader.getController();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         loadProducts();
         btnList = Arrays.asList(product_btn,prod_type_btn,salesman_btn,attachment_btn);
     }
@@ -193,6 +192,10 @@ public class Controller  implements Initializable{
                 Parent root = loader.load();
                 dispatcherController = loader.getController();
                 Scene scene = null;
+                FadeTransition ft = new FadeTransition(Duration.millis(800),root);
+                ft.setFromValue(0.0);
+                ft.setToValue(1.0);
+                ft.play();
                 switch (createUi){
                     case "create_product": scene = new Scene(root, 600, 500); break;
                     case "create_product_type": scene = new Scene(root, 600, 400);break;

@@ -89,6 +89,11 @@ public class CreateSalesmanController implements Initializable,DispatcherControl
 
     }
 
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     @FXML
     public void handleCancel(){
         stage.close();

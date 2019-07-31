@@ -1,35 +1,30 @@
 package sample.controller;
 
-import animatefx.animation.*;
 import com.jfoenix.controls.JFXButton;
-import javafx.application.Platform;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import sample.dao.ProductDao;
 import sample.inteface.DispatcherController;
-import sample.model.Product;
 import sample.model.dto.ProductDto;
 import sample.utility.AlertUtil;
 import sample.utility.ControllerUtil;
 import sample.utility.DatabaseUtil;
+import sample.utility.FilterUtil;
 
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -54,8 +49,9 @@ public class ProductController implements Initializable,DispatcherController<Pro
 
     private ProductDao productDao;
     private ObservableList<ProductDto> list;
+    private JFXTextField filterField;
+    private FilterUtil filterUtil;
     private static ProductController INSTANCE;
-    private UpdateProductController updateProductController;
 
     public ProductController(){
         INSTANCE =this;
@@ -169,10 +165,21 @@ public class ProductController implements Initializable,DispatcherController<Pro
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
+        System.out.println("stage nullable: " + (stage==null));
+
     }
 
     @Override
     public void setData(ObservableList<ProductDto> list, ProductDto dto, int index) {
 
     }
+
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+        this.filterField = filterField;
+        System.out.println("filterfield nullable: " + (filterField==null));
+        filterUtil = new FilterUtil(this.filterField,product_table,list);
+        filterUtil.initFilter();
+    }
+
 }

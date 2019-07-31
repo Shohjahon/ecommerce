@@ -144,6 +144,11 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
         dateDetailPicker.setValue(LocalDate.from(dto.getDate()));
     }
 
+    @Override
+    public void setFilterField(JFXTextField filterField) {
+
+    }
+
     @FXML
     public void handleCancel(){
         stage.close();
