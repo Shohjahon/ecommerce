@@ -1,5 +1,6 @@
 package sample.inteface;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;
@@ -15,4 +16,6 @@ public interface DispatcherController<T> {
     void setData(ObservableList<T> list, T dto, int index);
 
     void setFilterField(JFXTextField filterField);
+
+    void setExportToExcelBtn(JFXButton btn);
 }

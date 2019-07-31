@@ -68,6 +68,11 @@ public class CreateProductTypeController implements Initializable,DispatcherCont
 
     }
 
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+
+    }
+
     public void setProductTypes(ObservableList<ProductType> productTypes) {
         this.productTypes = productTypes;
     }

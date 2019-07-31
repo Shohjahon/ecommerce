@@ -146,6 +146,7 @@ public class Controller  implements Initializable{
             dispatcherController = loader.getController();
             dispatcherController.setStage(stage);
             dispatcherController.setFilterField(filterField);
+            dispatcherController.setExportToExcelBtn(toExcelBtn);
             new FadeIn(root).play();
         } catch (IOException e) {
            e.printStackTrace();

@@ -19,6 +19,7 @@ import javafx.util.Callback;
 import sample.dao.SalesRecordsDao;
 import sample.inteface.DispatcherController;
 import sample.model.SalesRecords;
+import sample.model.dto.ProductDto;
 import sample.model.dto.SalesRecordsDto;
 import sample.utility.*;
 
@@ -60,6 +61,8 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private FilterUtil filterUtil;
     private JFXTextField filterField;
+    private ExcelUtil<SalesRecordsDto> excelUtil;
+    private JFXButton toExcelBtn;
 
 
     @Override
@@ -219,6 +222,16 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     public void setFilterField(JFXTextField filterField) {
         this.filterField = filterField;
         refreshFilter();
+    }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+        this.toExcelBtn = btn;
+
+        this.toExcelBtn.setOnAction(event -> {
+            excelUtil = new ExcelUtil<>(sales_records_table,"sales_records",stage);
+            excelUtil.exportToExcel();
+        });
     }
 
     public void refreshFilter(){

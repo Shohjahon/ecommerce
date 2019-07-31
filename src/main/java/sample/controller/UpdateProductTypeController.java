@@ -58,6 +58,11 @@ public class UpdateProductTypeController implements Initializable,DispatcherCont
 
     }
 
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+
+    }
+
     public static UpdateProductTypeController getInstance(){
         return INSTANCE;
     }

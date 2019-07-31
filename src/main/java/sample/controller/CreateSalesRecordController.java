@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import sample.dao.ProductDao;
 import sample.dao.SalesRecordsDao;
 import sample.dao.SalesmanDao;
@@ -25,6 +26,8 @@ import sample.utility.DatabaseUtil;
 import sample.utility.DateTimeUtil;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -128,6 +131,29 @@ public class CreateSalesRecordController implements Initializable,DispatcherCont
         new ComboBoxAutoComplete<String>(productBox);
         new ComboBoxAutoComplete<String>(salesmanBox);
 
+        dateDetailPicker.setConverter(new StringConverter<LocalDate>() {
+            String pattern = "dd.MM.yyyy";
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
+
+            @Override
+            public String toString(LocalDate date) {
+                if (date != null) {
+                    return dateFormatter.format(date);
+                } else {
+                    return "";
+                }
+            }
+
+            @Override
+            public LocalDate fromString(String string) {
+                if (string != null && !string.isEmpty()) {
+                    return LocalDate.parse(string, dateFormatter);
+                } else {
+                    return null;
+                }
+            }
+        });
+
     }
 
     @Override
@@ -142,6 +168,11 @@ public class CreateSalesRecordController implements Initializable,DispatcherCont
 
     @Override
     public void setFilterField(JFXTextField filterField) {
+
+    }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
 
     }
 

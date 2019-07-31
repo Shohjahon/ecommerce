@@ -64,6 +64,11 @@ public class UpdateProductController implements Initializable,DispatcherControll
 
     }
 
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+
+    }
+
     @FXML
     public void handleUpdateProduct(){
         String pName = productNameField.getText();

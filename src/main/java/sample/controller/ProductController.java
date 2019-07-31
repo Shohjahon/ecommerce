@@ -15,16 +15,21 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import sample.dao.ProductDao;
 import sample.inteface.DispatcherController;
 import sample.model.dto.ProductDto;
-import sample.utility.AlertUtil;
-import sample.utility.ControllerUtil;
-import sample.utility.DatabaseUtil;
-import sample.utility.FilterUtil;
+import sample.utility.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,6 +56,8 @@ public class ProductController implements Initializable,DispatcherController<Pro
     private ObservableList<ProductDto> list;
     private JFXTextField filterField;
     private FilterUtil filterUtil;
+    private JFXButton toExcelBtn;
+    private ExcelUtil<ProductDto> excelUtil;
     private static ProductController INSTANCE;
 
     public ProductController(){
@@ -181,5 +188,16 @@ public class ProductController implements Initializable,DispatcherController<Pro
         filterUtil = new FilterUtil(this.filterField,product_table,list);
         filterUtil.initFilter();
     }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+        this.toExcelBtn = btn;
+
+        this.toExcelBtn.setOnAction(event -> {
+            excelUtil = new ExcelUtil<>(product_table,"product",stage);
+            excelUtil.exportToExcel();
+        });
+    }
+
 
 }

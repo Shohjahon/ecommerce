@@ -94,6 +94,11 @@ public class CreateSalesmanController implements Initializable,DispatcherControl
 
     }
 
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+
+    }
+
     @FXML
     public void handleCancel(){
         stage.close();

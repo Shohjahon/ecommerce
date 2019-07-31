@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import sample.dao.ProductDao;
 import sample.dao.SalesRecordsDao;
 import sample.dao.SalesmanDao;
@@ -26,6 +27,7 @@ import sample.utility.DateTimeUtil;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -124,6 +126,28 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
         new ComboBoxAutoComplete<String>(productBox);
         new ComboBoxAutoComplete<String>(salesmanBox);
 
+        dateDetailPicker.setConverter(new StringConverter<LocalDate>() {
+            String pattern = "dd.MM.yyyy";
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
+
+            @Override
+            public String toString(LocalDate date) {
+                if (date != null) {
+                    return dateFormatter.format(date);
+                } else {
+                    return "";
+                }
+            }
+
+            @Override
+            public LocalDate fromString(String string) {
+                if (string != null && !string.isEmpty()) {
+                    return LocalDate.parse(string, dateFormatter);
+                } else {
+                    return null;
+                }
+            }
+        });
     }
 
     @Override
@@ -137,15 +161,31 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
         this.salesRecordsDto = dto;
         this.index = index;
 
-        productBox.getSelectionModel().select(dto.getProductName());
-        salesmanBox.getSelectionModel().select(dto.getSalesmanName());
-        inDetailField.setText(String.valueOf(dto.getInputPrice()));
-        outDetailField.setText(String.valueOf(dto.getInputPrice()));
-        dateDetailPicker.setValue(LocalDate.from(dto.getDate()));
+        try {
+            SalesRecords salesRecords = salesRecordsDao.findSalesRecorById(dto.getId());
+            productBox.getSelectionModel().select(salesRecords.getProduct());
+            salesmanBox.getSelectionModel().select(salesRecords.getSalesman());
+            inDetailField.setText(String.valueOf(dto.getInputPrice()));
+            outDetailField.setText(String.valueOf(dto.getInputPrice()));
+            dateDetailPicker.setValue(LocalDate.from(dto.getDate()));
+        } catch (Exception e) {
+            e.printStackTrace();
+            AlertUtil.showAlert(Alert.AlertType.ERROR,
+                    "Хатолик",
+                    "Хатолик юз берди! ",
+                    "Дастур билан боғлиқ хатолик юз берди!  \n" +
+                            "Илтимос дастур администратори билан боғланинг! ");
+        }
+
     }
 
     @Override
     public void setFilterField(JFXTextField filterField) {
+
+    }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
 
     }
 

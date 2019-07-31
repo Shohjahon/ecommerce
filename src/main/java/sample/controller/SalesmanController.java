@@ -25,11 +25,9 @@ import javafx.util.Callback;
 import sample.dao.SalesmanDao;
 import sample.inteface.DispatcherController;
 import sample.model.Salesman;
+import sample.model.dto.ProductDto;
 import sample.model.dto.SalesmanDto;
-import sample.utility.AlertUtil;
-import sample.utility.ControllerUtil;
-import sample.utility.DatabaseUtil;
-import sample.utility.FilterUtil;
+import sample.utility.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -58,6 +56,8 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     private static SalesmanController INSTANCE;
     private JFXTextField filterField;
     private FilterUtil filterUtil;
+    private JFXButton toExcelBtn;
+    private ExcelUtil<SalesmanDto> excelUtil;
 
     public SalesmanController(){
         INSTANCE = this;
@@ -185,6 +185,16 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
         this.filterField = filterField;
         filterUtil = new FilterUtil(this.filterField,salesman_table,list);
         filterUtil.initFilter();
+    }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+        this.toExcelBtn = btn;
+
+        this.toExcelBtn.setOnAction(event -> {
+            excelUtil = new ExcelUtil<>(salesman_table,"salesman",stage);
+            excelUtil.exportToExcel();
+        });
     }
 
     public static SalesmanController getInstance(){

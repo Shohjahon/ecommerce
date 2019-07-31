@@ -25,8 +25,10 @@ import org.slf4j.LoggerFactory;
 import sample.dao.ProductTypeDao;
 import sample.inteface.DispatcherController;
 import sample.model.ProductType;
+import sample.model.dto.ProductDto;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
+import sample.utility.ExcelUtil;
 import sample.utility.FilterUtil;
 
 import java.io.IOException;
@@ -53,6 +55,8 @@ public class ProductTypeController implements Initializable , DispatcherControll
     private UpdateProductTypeController updateProductTypeController;
     private FilterUtil filterUtil;
     private JFXTextField filterField;
+    private JFXButton toExcelBtn;
+    private ExcelUtil<ProductType> excelUtil;
 
 
     public ProductTypeController(){
@@ -78,6 +82,16 @@ public class ProductTypeController implements Initializable , DispatcherControll
         this.filterField = filterField;
         filterUtil = new FilterUtil(this.filterField,product_type_table,list);
         filterUtil.initFilter();
+    }
+
+    @Override
+    public void setExportToExcelBtn(JFXButton btn) {
+        this.toExcelBtn = btn;
+
+        this.toExcelBtn.setOnAction(event -> {
+            excelUtil = new ExcelUtil<>(product_type_table,"product_type",stage);
+            excelUtil.exportToExcel();
+        });
     }
 
 
