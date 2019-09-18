@@ -92,9 +92,10 @@ public class UpdateSalesmanController implements Initializable,DispatcherControl
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

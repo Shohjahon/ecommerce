@@ -1,6 +1,7 @@
 package sample.utility;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import sample.constant.Query;
 import sample.dao.ProductDao;
 import sample.dao.ProductTypeDao;
 import sample.dao.SalesRecordsDao;
@@ -11,7 +12,9 @@ import sample.dao.impl.SalesRecordsDaoImpl;
 import sample.dao.impl.SalesmanDaoImpl;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,12 +32,24 @@ public class DatabaseUtil {
     public static Connection getConnection(){
         if (connection == null){
             try {
-                MysqlDataSource source = new MysqlDataSource();
-                source.setURL("jdbc:mysql://localhost:3306/ecommerce");
-                source.setUser("root");
-                source.setPassword("1");
-                connection = source.getConnection();
+                String url;
+                Class.forName("org.sqlite.JDBC");
+                connection = DriverManager.getConnection("jdbc:sqlite:ecommerce.db");
+                Statement statement = connection.createStatement();
+                statement.setQueryTimeout(30);
+
+                statement.executeUpdate(Query.create_salesman);
+                statement.executeUpdate(Query.create_product_type);
+                statement.executeUpdate(Query.create_product);
+                statement.executeUpdate(Query.create_sales_record);
+//                MysqlDataSource source = new MysqlDataSource();
+//                source.setURL("jdbc:mysql://localhost:3306/ecommerce");
+//                source.setUser("root");
+//                source.setPassword("1");
+//                connection = source.getConnection();
             } catch (SQLException e) {
+                Logger.getLogger(DatabaseUtil.class.getName()).log(Level.SEVERE,null,e);
+            } catch (ClassNotFoundException e) {
                 Logger.getLogger(DatabaseUtil.class.getName()).log(Level.SEVERE,null,e);
             }
         }

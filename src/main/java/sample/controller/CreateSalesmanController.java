@@ -57,6 +57,7 @@ public class CreateSalesmanController implements Initializable,DispatcherControl
                 salesmanController = SalesmanController.getInstance();
                 salesmanController.populateSalesmanTable();
                 handleCancel();
+                salesmanController.refreshFilter();
             } catch (Exception e) {
                 e.printStackTrace();
                 AlertUtil.showAlert(Alert.AlertType.ERROR,
@@ -95,9 +96,10 @@ public class CreateSalesmanController implements Initializable,DispatcherControl
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     @FXML
     public void handleCancel(){

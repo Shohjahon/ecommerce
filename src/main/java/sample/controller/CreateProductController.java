@@ -77,9 +77,10 @@ public class CreateProductController implements Initializable,DispatcherControll
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     @FXML
     public void handleCancel(){
@@ -121,6 +122,7 @@ public class CreateProductController implements Initializable,DispatcherControll
                 productController = ProductController.getInstance();
                 productController.populateProductTable();
                 handleCancel();
+                productController.refreshFilter();
             } catch (Exception e) {
                 e.printStackTrace();
                 AlertUtil.showAlert(Alert.AlertType.ERROR,

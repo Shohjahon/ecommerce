@@ -69,9 +69,10 @@ public class CreateProductTypeController implements Initializable,DispatcherCont
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     public void setProductTypes(ObservableList<ProductType> productTypes) {
         this.productTypes = productTypes;
@@ -111,6 +112,7 @@ public class CreateProductTypeController implements Initializable,DispatcherCont
                 productTypeController = ProductTypeController.getInstance();
                 productTypeController.populateTableView();
                 handleCancel();
+                productTypeController.refreshFilter();
             } catch (Exception e) {
                 e.printStackTrace();
                 AlertUtil.showAlert(Alert.AlertType.ERROR,

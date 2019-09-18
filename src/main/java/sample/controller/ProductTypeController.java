@@ -26,10 +26,7 @@ import sample.dao.ProductTypeDao;
 import sample.inteface.DispatcherController;
 import sample.model.ProductType;
 import sample.model.dto.ProductDto;
-import sample.utility.AlertUtil;
-import sample.utility.DatabaseUtil;
-import sample.utility.ExcelUtil;
-import sample.utility.FilterUtil;
+import sample.utility.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -85,7 +82,7 @@ public class ProductTypeController implements Initializable , DispatcherControll
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton btn,JFXButton deleteBtn) {
         this.toExcelBtn = btn;
 
         this.toExcelBtn.setOnAction(event -> {
@@ -125,19 +122,11 @@ public class ProductTypeController implements Initializable , DispatcherControll
 
                         edit.setOnAction(event->{
                             ProductType productType = product_type_table.getItems().get(getIndex());
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/update/update_product_type.fxml"));
                             try {
-                                Parent parent = loader.load();
-                                updateProductTypeController = loader.getController();
-                                updateProductTypeController.setData(list,productType,getIndex());
-                                Scene scene = new Scene(parent,600,400);
-                                Stage stage = new Stage();
-                                stage.initModality(Modality.APPLICATION_MODAL);
-                                stage.setScene(scene);
-                                StageStyle style = StageStyle.TRANSPARENT;
-                                stage.initStyle(style);
-                                updateProductTypeController.setStage(stage);
-                                stage.showAndWait();
+                                ControllerUtil controllerUtil = new ControllerUtil(
+                                        "/fxml/update/update_product_type.fxml",
+                                        600,500,list,productType,getIndex());
+                                controllerUtil.showWindow();
                             } catch (IOException e) {
                                 e.printStackTrace();
                                 AlertUtil.showAlert(Alert.AlertType.ERROR,
@@ -146,6 +135,7 @@ public class ProductTypeController implements Initializable , DispatcherControll
                                         "Дастур билан боғлиқ хатолик юз берди!  \n" +
                                                 "Илтимос дастур администратори билан боғланинг! ");
                             }
+
                         });
 
                         delete.setOnAction(event->{
@@ -198,4 +188,8 @@ public class ProductTypeController implements Initializable , DispatcherControll
 
     }
 
+    public void refreshFilter(){
+        filterUtil = new FilterUtil(this.filterField,product_type_table,list);
+        filterUtil.initFilter();
+    }
 }

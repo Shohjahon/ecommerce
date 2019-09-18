@@ -28,7 +28,7 @@
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #379683;
+    -fx-background-color: #b4bbce;
 }
 
 .table-view .column-header {
@@ -62,10 +62,10 @@
     -fx-text-fill: white;
 }
 
-.jfx-date-picker .text-field{
-    -jfx-unfocus-color: white;
-    -fx-prompt-text-fill: white;
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-font-family: "Century Gothic";
-}
+/*.jfx-date-picker .text-field{*/
+    /*-jfx-unfocus-color: white;*/
+    /*-fx-prompt-text-fill: white;*/
+    /*-fx-text-fill: white;*/
+    /*-fx-font-size: 16px;*/
+    /*-fx-font-family: "Century Gothic";*/
+/*}*/

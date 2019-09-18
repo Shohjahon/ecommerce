@@ -4,6 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import sample.model.Product;
 import sample.model.Salesman;
 
 /**
@@ -64,6 +65,15 @@ public class ProductDto {
 
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public static ProductDto mapToProductDto(Product product){
+        ProductDto productDto = new ProductDto();
+        productDto.setId(product.getId());
+        productDto.setProductName(product.getProductName());
+        productDto.setProductType(product.getProductType().getProductType());
+        productDto.setDescription(product.getDescription());
+        return productDto;
     }
 
     @Override

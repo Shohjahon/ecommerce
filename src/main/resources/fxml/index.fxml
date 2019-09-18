@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: #F0F0F0;" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0F0F0;" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
    <top>
       <HBox alignment="CENTER_RIGHT" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="10.0" prefWidth="600.0" style="-fx-background-color: #dfe4ea;" BorderPane.alignment="CENTER">
          <padding>
@@ -88,6 +88,17 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="188.0" HBox.hgrow="ALWAYS">
                      <children>
+                        <JFXButton fx:id="delete_btn" layoutX="387.0" layoutY="24.0" prefHeight="34.0" prefWidth="157.0" style="-fx-background-color: #FF4500;" text="Ўчириш" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="1.4em" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
                         <JFXButton fx:id="add_btn" onAction="#handleCreates" prefHeight="34.0" prefWidth="157.0" style="-fx-background-color: #3399ff;" text="Қўшиш" textFill="WHITE" HBox.hgrow="ALWAYS">
                            <font>
                               <Font name="Arial" size="16.0" />

@@ -185,9 +185,10 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     @FXML
     public void handleCancel(){

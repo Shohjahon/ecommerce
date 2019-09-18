@@ -17,5 +17,5 @@ public interface DispatcherController<T> {
 
     void setFilterField(JFXTextField filterField);
 
-    void setExportToExcelBtn(JFXButton btn);
+    void setMainBtns(JFXButton export,JFXButton deleteBtn);
 }

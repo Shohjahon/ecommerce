@@ -31,13 +31,12 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/fxml/index.fxml"));
         Parent root = loader.load();
         final Controller controller = loader.getController();
-        Scene scene = new Scene(root,1500,800);
+        Scene scene = new Scene(root,1200,800);
         scene.getStylesheets().add(getClass().getResource("/style/styles.css").toExternalForm());
         StageStyle style = StageStyle.TRANSPARENT;
         primaryStage.setScene(scene);
         primaryStage.initStyle(style);
         controller.setStage(primaryStage,scene);
-
         primaryStage.show();
         new FadeIn(root).play();
     }

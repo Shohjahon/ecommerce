@@ -58,6 +58,8 @@ public class Controller  implements Initializable{
     @FXML
     private JFXButton add_btn;
     @FXML
+    private JFXButton delete_btn;
+    @FXML
     private JFXButton toExcelBtn;
     private List<JFXButton> btnList;
     private String selectedView;
@@ -91,6 +93,8 @@ public class Controller  implements Initializable{
     @FXML
     public void loadProducts(){
         setDefaultColor();
+        delete_btn.setVisible(false);
+        add_btn.setVisible(true);
         selectedView = "product";
         this.product_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("product");
@@ -99,6 +103,8 @@ public class Controller  implements Initializable{
     @FXML
     private void loadDetailed(){
         setDefaultColor();
+        delete_btn.setVisible(true);
+        add_btn.setVisible(false);
         selectedView = "sales_record";
         this.attachment_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("sales_record");
@@ -107,6 +113,8 @@ public class Controller  implements Initializable{
     @FXML
     private void loadSalesman(){
         setDefaultColor();
+        delete_btn.setVisible(false);
+        add_btn.setVisible(true);
         selectedView = "salesman";
         this.salesman_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("salesman");
@@ -115,6 +123,8 @@ public class Controller  implements Initializable{
     @FXML
     private void loadProductType(){
         setDefaultColor();
+        delete_btn.setVisible(false);
+        add_btn.setVisible(true);
         selectedView = "product_type";
         this.prod_type_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("product_type");
@@ -146,7 +156,7 @@ public class Controller  implements Initializable{
             dispatcherController = loader.getController();
             dispatcherController.setStage(stage);
             dispatcherController.setFilterField(filterField);
-            dispatcherController.setExportToExcelBtn(toExcelBtn);
+            dispatcherController.setMainBtns(toExcelBtn,delete_btn);
             new FadeIn(root).play();
         } catch (IOException e) {
            e.printStackTrace();
@@ -177,6 +187,7 @@ public class Controller  implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         selectedView = "product";
         loadProducts();
+        delete_btn.setVisible(false);
         btnList = Arrays.asList(product_btn,prod_type_btn,salesman_btn,attachment_btn);
     }
 

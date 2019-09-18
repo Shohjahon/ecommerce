@@ -3,15 +3,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
-<TableView fx:id="sales_records_table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SalesRecordsController">
+<TableView fx:id="sales_records_table" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SalesRecordsController">
   <columns>
     <TableColumn fx:id="colDetailId" prefWidth="75.0" text="ID" />
     <TableColumn fx:id="colDetailProductName" minWidth="2.0" prefWidth="2.0" text="Маҳсулот номи" />
       <TableColumn fx:id="colDetailSalesman" minWidth="5.0" prefWidth="5.0" text="Кимдан олинган" />
-      <TableColumn fx:id="colDetailProductType" prefWidth="347.0" text="Маҳсулот тури" />
-      <TableColumn fx:id="colDetailOutPrice" prefWidth="16.0" text="Сотилиш нархи" />
+      <TableColumn fx:id="colDetailProductType" prefWidth="253.0" text="Маҳсулот тури" />
+      <TableColumn fx:id="colDetailOutPrice" prefWidth="110.0" text="Сотилиш нархи" />
       <TableColumn fx:id="colDetailInputPrice" minWidth="0.0" prefWidth="0.0" text="Келиш нархи" />
       <TableColumn fx:id="colDetailDate" minWidth="0.0" prefWidth="0.0" text="Сана" />
-      <TableColumn fx:id="colDetailAction" minWidth="2.0" prefWidth="83.0" text="Ҳисобот билан ишлаш" />
+      <TableColumn fx:id="colDetailAction" minWidth="2.0" prefWidth="154.0" text="Ҳисобот билан ишлаш" />
   </columns>
 </TableView>

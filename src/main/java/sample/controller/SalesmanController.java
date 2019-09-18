@@ -188,13 +188,18 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton btn,JFXButton deleteBtn) {
         this.toExcelBtn = btn;
 
         this.toExcelBtn.setOnAction(event -> {
             excelUtil = new ExcelUtil<>(salesman_table,"salesman",stage);
             excelUtil.exportToExcel();
         });
+    }
+
+    public void refreshFilter(){
+        filterUtil = new FilterUtil(this.filterField,salesman_table,list);
+        filterUtil.initFilter();
     }
 
     public static SalesmanController getInstance(){

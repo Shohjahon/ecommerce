@@ -30,7 +30,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
         ProductType productType = null;
         try (PreparedStatement statement = connection.prepareStatement(SELECT_BY_NAME_SQL)){
             connection.setAutoCommit(false);
-            statement.setNString(1,type);
+            statement.setString(1,type);
             try (ResultSet result = statement.executeQuery()){
                 if (result.next()){
                     productType = new ProductType(result.getString("product_type"));
@@ -89,7 +89,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
     public void insetProductType(ProductType productType) throws Exception {
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
             connection.setAutoCommit(false);
-            statement.setNString(1,productType.getProductType());
+            statement.setString(1,productType.getProductType());
             statement.executeUpdate();
             connection.commit();
         }catch (SQLException ex){
@@ -122,7 +122,7 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
     public void updateProductType(ProductType productType) throws Exception {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_SQL)){
             connection.setAutoCommit(false);
-            statement.setNString(1,productType.getProductType());
+            statement.setString(1,productType.getProductType());
             statement.setInt(2,productType.getId());
             statement.executeUpdate();
             connection.commit();

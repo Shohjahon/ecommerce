@@ -155,7 +155,9 @@ public class ProductController implements Initializable,DispatcherController<Pro
                 ProductDto productDto = new ProductDto();
                 productDto.setId(product.getId());
                 productDto.setProductName(product.getProductName());
-                productDto.setProductType(product.getProductType().getProductType());
+                if (product.getProductType()!=null){
+                    productDto.setProductType(product.getProductType().getProductType());
+                }
                 productDto.setDescription(product.getDescription());
                 list.add(productDto);
             });
@@ -190,13 +192,18 @@ public class ProductController implements Initializable,DispatcherController<Pro
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton btn, JFXButton deleteBtn) {
         this.toExcelBtn = btn;
 
         this.toExcelBtn.setOnAction(event -> {
             excelUtil = new ExcelUtil<>(product_table,"product",stage);
             excelUtil.exportToExcel();
         });
+    }
+
+    public void refreshFilter(){
+        filterUtil = new FilterUtil(this.filterField,product_table,list);
+        filterUtil.initFilter();
     }
 
 

@@ -51,9 +51,9 @@ public class SalesmanDaoImpl implements SalesmanDao {
     public void insertSalesman(Salesman salesman) throws Exception {
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
             connection.setAutoCommit(false);
-            statement.setNString(1,salesman.getFullName());
-            statement.setNString(2,salesman.getPhoneNumber());
-            statement.setNString(3,salesman.getAddress());
+            statement.setString(1,salesman.getFullName());
+            statement.setString(2,salesman.getPhoneNumber());
+            statement.setString(3,salesman.getAddress());
             statement.executeUpdate();
             connection.commit();
         }catch (SQLException ex){
@@ -83,9 +83,9 @@ public class SalesmanDaoImpl implements SalesmanDao {
     public void updateSalesman(Salesman salesman) throws Exception {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_SQL)){
             connection.setAutoCommit(false);
-            statement.setNString(1,salesman.getFullName());
-            statement.setNString(2,salesman.getPhoneNumber());
-            statement.setNString(3,salesman.getAddress());
+            statement.setString(1,salesman.getFullName());
+            statement.setString(2,salesman.getPhoneNumber());
+            statement.setString(3,salesman.getAddress());
             statement.setInt(4,salesman.getId());
             statement.executeUpdate();
             connection.commit();

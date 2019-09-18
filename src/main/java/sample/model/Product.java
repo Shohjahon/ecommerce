@@ -49,6 +49,13 @@ public class Product {
         this.productType = productType;
     }
 
+    public String printProduct(){
+        String pr = "{\n" +getProductName()
+                +"\n" + getProductType().getProductType()
+                +"\n"+getDescription() + "}";
+        return pr;
+    }
+
     @Override
     public String toString() {
         return productName;

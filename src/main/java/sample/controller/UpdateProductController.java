@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import sample.dao.ProductDao;
 import sample.dao.ProductTypeDao;
 import sample.inteface.DispatcherController;
+import sample.listener.ComboBoxAutoComplete;
 import sample.model.Product;
 import sample.model.ProductType;
 import sample.model.dto.ProductDto;
@@ -37,11 +38,10 @@ public class UpdateProductController implements Initializable,DispatcherControll
     private double dragAnchorX;
     private ProductDao productDao;
     private ProductTypeDao productTypeDao;
-    private List<ProductType> productTypes;
-    private ObservableList<String> list;
+    private ObservableList<ProductType> productTypeList;
     private ObservableList<ProductDto> productDtos;
     private int index;
-    private ProductDto product;
+    private ProductDto productDto;
     @FXML
     private JFXTextField productNameField;
     @FXML
@@ -52,11 +52,23 @@ public class UpdateProductController implements Initializable,DispatcherControll
 
     public void setData(ObservableList<ProductDto> productDtos,ProductDto product, int index){
         this.productDtos = productDtos;
-        this.product = product;
+        this.productDto = product;
         this.index = index;
-        productTypesBox.getSelectionModel().select(product.getProductType());
-        productNameField.setText(product.getProductName());
-        productDescriptionField.setText(product.getDescription());
+
+        try {
+            Product p = productDao.findProductById(product.getId());
+            productTypesBox.getSelectionModel().select(p.getProductType());
+            productNameField.setText(product.getProductName());
+            productDescriptionField.setText(product.getDescription());
+        } catch (Exception e) {
+            e.printStackTrace();
+            AlertUtil.showAlert(Alert.AlertType.ERROR,
+                    "Хатолик",
+                    "Хатолик юз берди! ",
+                    "Дастур билан боғлиқ хатолик юз берди!  \n" +
+                            "Илтимос дастур администратори билан боғланинг! ");
+        }
+
     }
 
     @Override
@@ -65,25 +77,28 @@ public class UpdateProductController implements Initializable,DispatcherControll
     }
 
     @Override
-    public void setExportToExcelBtn(JFXButton btn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
 
     }
+
 
     @FXML
     public void handleUpdateProduct(){
         String pName = productNameField.getText();
         String des = productDescriptionField.getText();
-        String pType = (String) productTypesBox.getSelectionModel().getSelectedItem();
-        System.out.println("pType ----------------" + pType);
-        if (!(pName.isEmpty() || pType.isEmpty())){
-            product.setProductName(pName);
+        ProductType productType = (ProductType) productTypesBox.getValue();
+
+        boolean isValid = (pName.isEmpty() || productType == null);
+
+        if (!isValid){
+            Product product = new Product(pName);
             product.setDescription(des);
-            product.setProductType(pType);
+            product.setProductType(productType);
+            product.setId(productDto.getId());
             try {
-                Product p = getProduct(product);
-                System.out.println("------> " + p);
-                productDao.updateProduct(p);
-                productDtos.set(index,product);
+                System.out.println("product updating ------> " + product.printProduct());
+                productDao.updateProduct(product);
+                productDtos.set(index,ProductDto.mapToProductDto(product));
                 handleCancel();
             }catch (Exception ex){
                 ex.printStackTrace();
@@ -103,29 +118,22 @@ public class UpdateProductController implements Initializable,DispatcherControll
         }
     }
 
-    private Product getProduct(ProductDto productDto) throws Exception {
-        ProductType productType = productTypeDao.findProductTypeByType(productDto.getProductType());
-        Product product = new Product();
-        product.setProductType(productType);
-        product.setProductName(productDto.getProductName());
-        product.setDescription(productDto.getDescription());
-        product.setId(productDto.getId());
-        return product;
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        list = FXCollections.observableArrayList();
+        productTypeList = FXCollections.observableArrayList();
+
         productDao = DatabaseUtil.getProductDao();
         productTypeDao = DatabaseUtil.getProductTypeDao();
+
         try {
-            productTypes = productTypeDao.findAllProductTypes();
-            productTypes.stream().forEach(productType -> list.add(productType.getProductType()));
+            productTypeList.addAll(productTypeDao.findAllProductTypes());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        productTypesBox.setItems(list);
+        productTypesBox.setItems(productTypeList);
 
+        new ComboBoxAutoComplete<String>(productTypesBox);
     }
 
     @Override
