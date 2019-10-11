@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,6 +25,7 @@ public class FilterUtil {
     private JFXTextField filterField;
     private TableView tableView;
     private ObservableList list;
+    private Set<Integer> selectedRows;
 
     public FilterUtil(JFXTextField filterField,
                       TableView tableView,
@@ -33,13 +35,18 @@ public class FilterUtil {
         this.list = list;
     }
 
+    public void setSelectedRowsAndClear(Set<Integer> selectedRows){
+        this.selectedRows = selectedRows;
+    }
+
     public void initFilter(){
         FilteredList filterData = new FilteredList<>(list, f->true);
 
-        System.out.println("init filter list: " + list);
-
         filterField.textProperty().addListener((observable, oldValue, newValue)->{
             filterData.setPredicate(dto -> {
+                if (selectedRows != null){
+                    selectedRows.clear();
+                }
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
                 }
@@ -53,8 +60,10 @@ public class FilterUtil {
 
                         if (t != null){
                             String value = t.toString();
-                            System.out.println("init filter dto field name: " + value +"\nnewValue: "+newValue);
-                            if (field.getName().equals("date")){
+                            String fieldName = field.getName();
+                            boolean isDate = fieldName.equals("date");
+
+                            if (isDate){
                                 value = formatStringDate(value);
                                 if (value.toLowerCase().contains(lowerCaseFilter)) return true;
                             }else if (value.toLowerCase().contains(lowerCaseFilter)){
@@ -76,17 +85,14 @@ public class FilterUtil {
     }
 
     private String formatStringDate(String date){
-        String dateString = date.substring(23, date.length()-7);
-        System.out.println("date string : " + dateString);
+        String dateString = date.substring(23, date.length()-1);
         String[] arr = dateString.split("-");
         String input = arr[2] + "." + arr[1] + "." + arr[0];
-        System.out.println("input date: " + input);
         DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         Date d;
         try {
             d = df.parse(input);
             String result = df.format(d);
-            System.out.println("parsed date : " + result);
             return  result;
         } catch (ParseException e) {
             e.printStackTrace();

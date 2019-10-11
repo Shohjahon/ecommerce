@@ -82,7 +82,7 @@ public class ProductTypeController implements Initializable , DispatcherControll
     }
 
     @Override
-    public void setMainBtns(JFXButton btn,JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton btn,JFXButton deleteBtn,JFXButton brief_btn) {
         this.toExcelBtn = btn;
 
         this.toExcelBtn.setOnAction(event -> {
@@ -172,10 +172,8 @@ public class ProductTypeController implements Initializable , DispatcherControll
     public void populateTableView(){
         list = FXCollections.observableArrayList();
         productTypeDao = DatabaseUtil.getProductTypeDao();
-        System.out.println("inside populate");
         try {
             productTypeDao.findAllProductTypes().stream().forEach(productType -> list.add(productType));
-            System.out.println("product types: " + list);
         } catch (Exception e) {
             e.printStackTrace();
             AlertUtil.showAlert(Alert.AlertType.ERROR,

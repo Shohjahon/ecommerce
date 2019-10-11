@@ -85,5 +85,4 @@ public class ProductDto {
                 ", description=" + description +
                 '}';
     }
-
 }

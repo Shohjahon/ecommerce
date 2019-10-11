@@ -28,7 +28,7 @@
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #b4bbce;
+    -fx-background-color: #69a7c2;
 }
 
 .table-view .column-header {
@@ -62,10 +62,14 @@
     -fx-text-fill: white;
 }
 
-/*.jfx-date-picker .text-field{*/
-    /*-jfx-unfocus-color: white;*/
-    /*-fx-prompt-text-fill: white;*/
-    /*-fx-text-fill: white;*/
-    /*-fx-font-size: 16px;*/
-    /*-fx-font-family: "Century Gothic";*/
-/*}*/
+.jfx_spinner{
+    -fx-progress-color: #2ba8bc;
+}
+
+.jfx-tab-pane .tab{
+    -fx-background-color:  #346F7C;
+}
+
+.jfx-tab-pane .tab-header-area .tab-header-background{
+    -fx-background-color:  #346F7C;
+}

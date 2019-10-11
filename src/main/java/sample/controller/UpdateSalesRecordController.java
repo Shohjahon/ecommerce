@@ -65,7 +65,6 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
     @FXML
     public void handleUpdateSalesRecord(){
         Date date = DateTimeUtil.convertToDate(dateDetailPicker.getValue());
-        System.out.println("update sales records: date --> " +date.getTime());
         String inCost = inDetailField.getText();
         String outCost = outDetailField.getText();
         Product product = (Product) productBox.getValue();
@@ -185,7 +184,7 @@ public class UpdateSalesRecordController implements Initializable,DispatcherCont
     }
 
     @Override
-    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn,JFXButton brief_btn) {
 
     }
 

@@ -6,36 +6,69 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/image/product.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/image/product.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductTypeController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesRecordController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesmanController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesmanController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController$1.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$1.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$2.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesmanController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/SalesmanController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductTypeController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesRecordController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesmanController.class" afterPath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesmanController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductTypeDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductTypeDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/SalesmanDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/sample/dao/impl/SalesmanDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/inteface/DispatcherController.class" afterPath="$PROJECT_DIR$/target/classes/sample/inteface/DispatcherController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/model/Product.class" afterPath="$PROJECT_DIR$/target/classes/sample/model/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/model/dto/ProductDto.class" afterPath="$PROJECT_DIR$/target/classes/sample/model/dto/ProductDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/utility/DatabaseUtil.class" afterPath="$PROJECT_DIR$/target/classes/sample/utility/DatabaseUtil.class" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="applied changes to sales records">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/75ed912b-c3da-4080-b8a6-7c061d96e097.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/fxml/create/create_sales_record.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/E-Commerce-1.0-jar-with-dependencies.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/E-Commerce-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/create/create_sales_record.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/constant/Query.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateProductTypeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesRecordController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesRecordController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/CreateSalesmanController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/ProductTypeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesRecordsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesmanController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/SalesmanController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateProductTypeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesRecordController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesRecordController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/controller/UpdateSalesmanController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/ProductDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/ProductTypeDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/SalesRecordsDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/SalesmanDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/ProductTypeDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/SalesRecordsDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/dao/impl/SalesmanDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/inteface/DispatcherController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/listener/ComboBoxAutoComplete.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/Product.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/ProductType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/SalesRecords.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/Salesman.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/dto/ProductDto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/dto/SalesRecordsDto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/model/dto/SalesmanDto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/AlertUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/ControllerUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/DatabaseUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/DateTimeUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/ExcelUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/utility/FilterUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e-commerce.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653/_metadata_/metadata.values.at" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecommerce.db" afterPath="$PROJECT_DIR$/ecommerce.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Shoh_Jahon.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shoh_Jahon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b9213ac4-1f3d-4ba5-b727-377ac078b653.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/E-Commerce.iml" afterPath="$PROJECT_DIR$/E-Commerce.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
@@ -43,7 +76,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductTypeController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductTypeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesmanController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesmanController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/ProductController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/ProductTypeController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/ProductTypeController.java" />
@@ -53,21 +85,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/dao/SalesRecordsDao.java" afterPath="$PROJECT_DIR$/src/main/java/sample/dao/SalesRecordsDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesmanDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesmanDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/inteface/DispatcherController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/inteface/DispatcherController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/model/Product.java" afterPath="$PROJECT_DIR$/src/main/java/sample/model/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/model/ProductType.java" afterPath="$PROJECT_DIR$/src/main/java/sample/model/ProductType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java" afterPath="$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java" afterPath="$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/utility/DatabaseUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sample/utility/DatabaseUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java" afterPath="$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/create/create_product.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/create/create_product.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/index.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/index.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/sales_record.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sales_record.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/update/update_product.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/update/update_product.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/style/styles.css" afterPath="$PROJECT_DIR$/src/main/resources/style/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/create/create_product.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/create/create_product.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/index.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/index.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/sales_record.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/sales_record.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/update/update_product.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/update/update_product.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/style/styles.css" afterPath="$PROJECT_DIR$/target/classes/style/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,6 +117,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/E_Commerce$Main.coverage" NAME="Main Coverage Results" MODIFIED="1570181961432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sample.controller.*</FILTER>
+    </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -112,24 +155,6 @@
       </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" value="main" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="ecommerce.db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="main" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="sales_records" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -184,44 +209,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/ProductController.java">
+      <file leaf-file-name="SalesRecordsDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="124" column="79" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="124" selection-end-column="79" />
+            <state relative-caret-position="257">
+              <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
               <folding>
-                <element signature="method#setData#0;class#ProductController#0" expanded="false" />
-                <element signature="method#setFilterField#0;class#ProductController#0" expanded="false" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2527#2528#0" expanded="true" />
+                <element signature="e#2630#2631#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalesRecordsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SalesRecordsController.java">
+      <file leaf-file-name="UpdateProductController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1694">
-              <caret line="315" column="25" lean-forward="false" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
+            <state relative-caret-position="127">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BriefController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/BriefController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="253" column="31" lean-forward="false" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="31" />
               <folding>
-                <element signature="e#3689#4367#0" expanded="true" />
-                <element signature="e#4366#4367#0" expanded="true" />
-                <element signature="e#5174#6205#0" expanded="true" />
-                <element signature="e#6204#6205#0" expanded="true" />
-                <element signature="method#populateSalesRecordsTable#0;class#SalesRecordsController#0" expanded="false" />
-                <element signature="e#8761#9388#0" expanded="false" />
-                <element signature="method#addRow#0;class#SalesRecordsController#0" expanded="false" />
-                <element signature="method#setData#0;class#SalesRecordsController#0" expanded="false" />
-                <element signature="method#setFilterField#0;class#SalesRecordsController#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#onMousePressed#0;class#BriefController#0" expanded="false" />
+                <element signature="method#onMouseDragged#0;class#BriefController#0" expanded="false" />
+                <element signature="method#max#0;class#BriefController#0" expanded="false" />
+                <element signature="method#initialize#0;class#BriefController#0" expanded="false" />
+                <element signature="e#4569#5328#0" expanded="false" />
+                <element signature="e#5635#5878#0" expanded="false" />
+                <element signature="e#5929#6168#0" expanded="false" />
+                <element signature="e#6212#6540#0" expanded="false" />
+                <element signature="e#7672#7673#0" expanded="true" />
+                <element signature="e#7706#7707#0" expanded="true" />
+                <element signature="method#showAllCalculations#0;class#BriefController#0" expanded="false" />
+                <element signature="method#calculateSellingPrice#0;class#BriefController#0" expanded="false" />
+                <element signature="method#calculateOverallSellingPrice#0;class#BriefController#0" expanded="false" />
+                <element signature="method#calculateOverallProfit#0;class#BriefController#0" expanded="false" />
+                <element signature="method#formatToCurrencyStandard#0;class#BriefController#0" expanded="false" />
+                <element signature="method#fillForm#0;class#BriefController#0" expanded="false" />
+                <element signature="method#updateFully#0;class#BriefController#0" expanded="false" />
+                <element signature="e#12426#12914#0" expanded="true" />
+                <element signature="e#12913#12914#0" expanded="true" />
+                <element signature="method#updateTask#0;class#BriefController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java">
+      <file leaf-file-name="product_brief.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/product_brief.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            <state relative-caret-position="-446">
+              <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -230,8 +281,8 @@
       <file leaf-file-name="SalesRecordsDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/SalesRecordsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="205">
+              <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -240,65 +291,80 @@
       <file leaf-file-name="SalesRecordsDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="80">
+              <caret line="250" column="70" lean-forward="false" selection-start-line="250" selection-start-column="70" selection-end-line="250" selection-end-column="70" />
               <folding>
-                <marker date="1564393624325" expanded="true" signature="525:629" ph="INSERT INTO sales_records... " />
-                <marker date="1564393624325" expanded="true" signature="671:765" ph="UPDATE sales... " />
-                <marker date="1564393624325" expanded="true" signature="807:845" ph="DELETE FROM " />
-                <marker date="1564393624325" expanded="true" signature="891:931" ph="SELECT * FRO... sales_records" />
-                <marker date="1564393624325" expanded="true" signature="977:1004" ph="SELECT * FRO... sales_records" />
+                <element signature="method#insertSalesRecord#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+                <element signature="method#deleteSalesRecord#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+                <element signature="method#findAllSalesRecords#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+                <element signature="method#updateSalesRecordFullyById#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+                <element signature="method#uploadImageBySalesRecordId#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+                <marker date="1570782506227" expanded="true" signature="848:955" ph="INSERT INTO sales_records... " />
+                <marker date="1570782506227" expanded="true" signature="997:1106" ph="UPDATE sales... " />
+                <marker date="1570782506227" expanded="true" signature="1148:1186" ph="DELETE FROM " />
+                <marker date="1570782506227" expanded="true" signature="1232:1272" ph="SELECT * FRO... sales_records" />
+                <marker date="1570782506227" expanded="true" signature="1318:1345" ph="SELECT * FRO... sales_records" />
+                <marker date="1570782506227" expanded="true" signature="1389:1521" ph="UPDATE sales... " />
+                <marker date="1570782506227" expanded="true" signature="1565:1613" ph="UPDATE sales... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalesRecordsDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java">
+      <file leaf-file-name="ValidationUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ValidationUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="-341">
+              <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateProductController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9213ac4-1f3d-4ba5-b727-377ac078b653/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="156">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateSalesmanController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java">
+      <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="138">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateProductTypeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java">
+      <file leaf-file-name="SalesRecordsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SalesRecordsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateSalesRecordController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-601">
+              <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="class#4327:4711" expanded="false" />
+                <element signature="e#5244#5810#0" expanded="false" />
+                <element signature="e#5859#6423#0" expanded="false" />
+                <element signature="e#6465#7054#0" expanded="false" />
+                <element signature="e#7101#7666#0" expanded="false" />
+                <element signature="method#setData#0;class#SalesRecordsController#0" expanded="false" />
+                <element signature="method#setFilterField#0;class#SalesRecordsController#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -309,9 +375,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -321,7 +387,22 @@
       <find>controller</find>
       <find>setStr</find>
       <find>setNString</find>
+      <find>double</find>
+      <find>init filter li</find>
+      <find>crea</find>
+      <find>filterField</find>
+      <find>stage</find>
+      <find>HBox</find>
+      <find>quantity</find>
+      <find>coeff</find>
+      <find>BACK</find>
+      <find>Sys</find>
+      <find>backToMain</find>
+      <find>form</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Double</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -329,6 +410,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="shohjahon &lt;r.shohjahon@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -339,7 +425,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateProductTypeController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java" root0="SKIP_INSPECTION" />
@@ -351,36 +436,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/listener/AutoCompleteComboBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/listener/AutoCompleteComboBoxListener.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/sales_detail.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/create/create_sales_record.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/ProductType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/Salesman.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/75ed912b-c3da-4080-b8a6-7c061d96e097/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/listener/HideableItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/update/update_sales_record.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/inteface/CommonController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/Product.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/feae7b7b-1249-4912-aa1e-7c9941d7561c/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesmanDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/utility/DatabaseUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/constant/Query.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b9213ac4-1f3d-4ba5-b727-377ac078b653/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/style/styles.css" />
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/GlyphIcon.class" />
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/styles/glyphs.css" />
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/styles/glyphs_blue.css" />
@@ -388,20 +449,44 @@
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/GlyphsBuilder.class" />
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/octicons/OctIcon.class" />
         <option value="D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/fontawesome/FontAwesomeIcon.class" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/ProductType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utility/ValidationUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/inteface/DispatcherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesmanController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/brief_record.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/brief_product.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/style/styles.css" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/ProductTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/SalesmanController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/dao/SalesRecordsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b9213ac4-1f3d-4ba5-b727-377ac078b653/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/product_brief.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/SalesRecordsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/BriefController.java" />
       </list>
     </option>
   </component>
@@ -514,7 +599,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -538,6 +623,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,6 +677,10 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -633,6 +726,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -667,7 +782,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inteface" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-Commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -726,7 +905,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -757,15 +936,16 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="e-commerce" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Source_Codes/Intellij/E-Commerce/src/main/java/sample/utility/FilterUtil.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Source_Codes\Intellij\E-Commerce\src\main\resources\image" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Source_Codes\Intellij\E-Commerce\src\main\resources\image" />
       <recent name="D:\Source_Codes\Intellij\E-Commerce\src\main\resources\font" />
       <recent name="D:\Source_Codes\Intellij\E-Commerce\src\main\resources\fxml" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Source_Codes\Intellij\E-Commerce\src\main\resources\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -786,61 +966,6 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -1253,6 +1378,25 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="Talios.JiraConfigurationComponent" enableIssueTracking="false" autoRefresh="false" useExternalBrowser="false" refreshTimeout="0" annotateissues="false">
+    <servers />
+    <columns>
+      <column id="created" position="0" width="-1" />
+      <column id="key" position="1" width="-1" />
+      <column id="component" position="2" width="-1" />
+      <column id="title" position="3" width="-1" />
+      <column id="type" position="4" width="-1" />
+      <column id="priority" position="5" width="-1" />
+      <column id="status" position="6" width="-1" />
+      <column id="resolution" position="7" width="-1" />
+      <column id="assignee" position="8" width="-1" />
+      <column id="reporter" position="9" width="-1" />
+      <column id="updated" position="10" width="-1" />
+      <column id="dueDate" position="11" width="-1" />
+      <column id="version" position="12" width="-1" />
+      <column id="fixVersion" position="13" width="-1" />
+    </columns>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
@@ -1306,57 +1450,95 @@
       <workItem from="1568262025717" duration="43000" />
       <workItem from="1568347107121" duration="2620000" />
       <workItem from="1568692824234" duration="703000" />
-      <workItem from="1568782202114" duration="7060000" />
+      <workItem from="1568782202114" duration="14273000" />
+      <workItem from="1569559846162" duration="80000" />
+      <workItem from="1570098892724" duration="25000" />
+      <workItem from="1570165748297" duration="20210000" />
+      <workItem from="1570193548479" duration="1340000" />
+      <workItem from="1570506893148" duration="23834000" />
+      <workItem from="1570552130292" duration="10312000" />
+      <workItem from="1570603624894" duration="11503000" />
+      <workItem from="1570680522847" duration="27303000" />
+      <workItem from="1570767424956" duration="15998000" />
     </task>
+    <task id="LOCAL-00001" summary="applied changes to sales records">
+      <created>1568789443729</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568789443729</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272069000" />
+    <option name="totallyTimeSpent" value="389887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="868" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Codota" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294423" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879376" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3598862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32877603" sideWeight="0.4911111" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3655761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="RNConsole" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TalkingData Jira" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31863442" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29442284" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18547341" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23346303" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1841764" sideWeight="0.4911111" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38975817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3883357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Codota" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294423" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32147938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32877603" sideWeight="0.5088889" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1364,37 +1546,91 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="applied changes to sales records" />
+    <option name="LAST_COMMIT_MESSAGE" value="applied changes to sales records" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="42" />
+      <option name="time" value="164" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="value" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://DATABASE/feae7b7b-1249-4912-aa1e-7c9941d7561c">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/beans/value/ChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/style/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/image/tele.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/image/image.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b9213ac4-1f3d-4ba5-b727-377ac078b653">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>DATABASE</ID>
-          <OriginalElement>feae7b7b-1249-4912-aa1e-7c9941d7561c</OriginalElement>
+          <OriginalElement>b9213ac4-1f3d-4ba5-b727-377ac078b653</OriginalElement>
           <nodes>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.sqlite_master</node>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.product_types</node>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.sales_records</node>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.products</node>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.sqlite_sequence</node>
-            <node x="" y="">feae7b7b-1249-4912-aa1e-7c9941d7561c.TABLE:main.salesman</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.sales_records</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.product_types</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.products</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.sqlite_sequence</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.salesman</node>
+            <node x="" y="">b9213ac4-1f3d-4ba5-b727-377ac078b653.TABLE:main.sqlite_master</node>
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.8122938530734632" x="315.0" y="342.0" />
+          <settings layout="Hierarchic Group" zoom="0.5575589459084604" x="335.0" y="411.0" />
           <SelectedNodes />
           <Categories>
             <Category>Columns</Category>
@@ -1404,30 +1640,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/75ed912b-c3da-4080-b8a6-7c061d96e097.SCHEMA:ecommerce">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>75ed912b-c3da-4080-b8a6-7c061d96e097.SCHEMA:ecommerce</OriginalElement>
-          <nodes>
-            <node x="" y="">75ed912b-c3da-4080-b8a6-7c061d96e097.TABLE:ecommerce.products</node>
-            <node x="" y="">75ed912b-c3da-4080-b8a6-7c061d96e097.TABLE:ecommerce.salesman</node>
-            <node x="" y="">75ed912b-c3da-4080-b8a6-7c061d96e097.TABLE:ecommerce.sales_records</node>
-            <node x="" y="">75ed912b-c3da-4080-b8a6-7c061d96e097.TABLE:ecommerce.product_types</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.492831541218638" x="195.0" y="636.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="84" column="48" lean-forward="false" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b856a134/75ed912b-c3da-4080-b8a6-7c061d96e097/ecommerce.product_types">
+    <entry file="dbDummy://dbtable:/b856a134/b9213ac4-1f3d-4ba5-b727-377ac078b653/main.products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1439,391 +1660,951 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db_info/dump.sql">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="1144">
+          <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#216107#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5537#5567#0" expanded="false" />
+            <element signature="e#5644#5645#0" expanded="false" />
+            <element signature="e#5675#5676#0" expanded="false" />
+            <element signature="e#7168#7212#0" expanded="false" />
+            <element signature="e#7284#7285#0" expanded="false" />
+            <element signature="e#7312#7313#0" expanded="false" />
+            <element signature="e#13334#13364#0" expanded="false" />
+            <element signature="e#15307#15351#0" expanded="false" />
+            <element signature="e#19027#19071#0" expanded="false" />
+            <element signature="e#20496#20540#0" expanded="false" />
+            <element signature="e#26379#26423#0" expanded="false" />
+            <element signature="e#29660#29704#0" expanded="false" />
+            <element signature="e#44246#44247#0" expanded="false" />
+            <element signature="e#44327#44328#0" expanded="false" />
+            <element signature="e#44608#44609#0" expanded="false" />
+            <element signature="e#44673#44674#0" expanded="false" />
+            <element signature="e#44715#44716#0" expanded="false" />
+            <element signature="e#44780#44781#0" expanded="false" />
+            <element signature="e#44838#44839#0" expanded="false" />
+            <element signature="e#44888#44889#0" expanded="false" />
+            <element signature="e#44950#44951#0" expanded="false" />
+            <element signature="e#45015#45016#0" expanded="false" />
+            <element signature="e#45070#45071#0" expanded="false" />
+            <element signature="e#45135#45136#0" expanded="false" />
+            <element signature="e#45190#45191#0" expanded="false" />
+            <element signature="e#45255#45256#0" expanded="false" />
+            <element signature="e#45285#45286#0" expanded="false" />
+            <element signature="e#45350#45351#0" expanded="false" />
+            <element signature="e#45477#45478#0" expanded="false" />
+            <element signature="e#45518#45519#0" expanded="false" />
+            <element signature="e#45599#45600#0" expanded="false" />
+            <element signature="e#45664#45665#0" expanded="false" />
+            <element signature="e#45767#45768#0" expanded="false" />
+            <element signature="e#45829#45830#0" expanded="false" />
+            <element signature="e#45922#45923#0" expanded="false" />
+            <element signature="e#45974#45975#0" expanded="false" />
+            <element signature="e#46075#46076#0" expanded="false" />
+            <element signature="e#46135#46136#0" expanded="false" />
+            <element signature="e#46897#46898#0" expanded="false" />
+            <element signature="e#46944#46945#0" expanded="false" />
+            <element signature="e#48325#48326#0" expanded="false" />
+            <element signature="e#48378#48379#0" expanded="false" />
+            <element signature="e#49053#49054#0" expanded="false" />
+            <element signature="e#49134#49135#0" expanded="false" />
+            <element signature="e#49187#49188#0" expanded="false" />
+            <element signature="e#49270#49271#0" expanded="false" />
+            <element signature="e#51301#51302#0" expanded="false" />
+            <element signature="e#51356#51357#0" expanded="false" />
+            <element signature="e#51458#51487#0" expanded="false" />
+            <element signature="e#54847#54848#0" expanded="false" />
+            <element signature="e#54912#54913#0" expanded="false" />
+            <element signature="e#54960#54961#0" expanded="false" />
+            <element signature="e#55025#55026#0" expanded="false" />
+            <element signature="e#55062#55063#0" expanded="false" />
+            <element signature="e#55127#55128#0" expanded="false" />
+            <element signature="e#55349#55350#0" expanded="false" />
+            <element signature="e#55414#55415#0" expanded="false" />
+            <element signature="e#55493#55494#0" expanded="false" />
+            <element signature="e#55558#55559#0" expanded="false" />
+            <element signature="e#55628#55629#0" expanded="false" />
+            <element signature="e#55693#55694#0" expanded="false" />
+            <element signature="e#56434#56435#0" expanded="false" />
+            <element signature="e#56515#56516#0" expanded="false" />
+            <element signature="e#56554#56555#0" expanded="false" />
+            <element signature="e#56635#56636#0" expanded="false" />
+            <element signature="e#56674#56675#0" expanded="false" />
+            <element signature="e#56755#56756#0" expanded="false" />
+            <element signature="e#56857#56858#0" expanded="false" />
+            <element signature="e#56923#56924#0" expanded="false" />
+            <element signature="e#58225#58226#0" expanded="false" />
+            <element signature="e#58260#58261#0" expanded="false" />
+            <element signature="e#58824#58825#0" expanded="false" />
+            <element signature="e#58883#58884#0" expanded="false" />
+            <element signature="e#59713#59714#0" expanded="false" />
+            <element signature="e#59760#59761#0" expanded="false" />
+            <element signature="e#60591#60592#0" expanded="false" />
+            <element signature="e#60656#60657#0" expanded="false" />
+            <element signature="e#60694#60695#0" expanded="false" />
+            <element signature="e#60759#60760#0" expanded="false" />
+            <element signature="e#60821#60822#0" expanded="false" />
+            <element signature="e#60886#60887#0" expanded="false" />
+            <element signature="e#60916#60917#0" expanded="false" />
+            <element signature="e#60981#60982#0" expanded="false" />
+            <element signature="e#61914#61944#0" expanded="false" />
+            <element signature="e#62220#62221#0" expanded="false" />
+            <element signature="e#62261#62262#0" expanded="false" />
+            <element signature="e#62500#62501#0" expanded="false" />
+            <element signature="e#62565#62566#0" expanded="false" />
+            <element signature="e#62642#62643#0" expanded="false" />
+            <element signature="e#62707#62708#0" expanded="false" />
+            <element signature="e#62790#62791#0" expanded="false" />
+            <element signature="e#62855#62856#0" expanded="false" />
+            <element signature="e#62917#62918#0" expanded="false" />
+            <element signature="e#62982#62983#0" expanded="false" />
+            <element signature="e#64296#64340#1" expanded="false" />
+            <element signature="e#65205#65206#0" expanded="false" />
+            <element signature="e#65255#65256#0" expanded="false" />
+            <element signature="e#66138#66139#0" expanded="false" />
+            <element signature="e#66201#66202#0" expanded="false" />
+            <element signature="e#66280#66281#0" expanded="false" />
+            <element signature="e#66350#66351#0" expanded="false" />
+            <element signature="e#66424#66425#0" expanded="false" />
+            <element signature="e#66490#66491#0" expanded="false" />
+            <element signature="e#66590#66591#0" expanded="false" />
+            <element signature="e#66674#66675#0" expanded="false" />
+            <element signature="e#66774#66775#0" expanded="false" />
+            <element signature="e#66838#66839#0" expanded="false" />
+            <element signature="e#66867#66897#0" expanded="false" />
+            <element signature="e#67176#67177#0" expanded="false" />
+            <element signature="e#67257#67258#0" expanded="false" />
+            <element signature="e#67337#67338#0" expanded="false" />
+            <element signature="e#67417#67418#0" expanded="false" />
+            <element signature="e#67687#67688#0" expanded="false" />
+            <element signature="e#67753#67754#0" expanded="false" />
+            <element signature="e#67804#67805#0" expanded="false" />
+            <element signature="e#67892#67893#0" expanded="false" />
+            <element signature="e#67935#67936#0" expanded="false" />
+            <element signature="e#68024#68025#0" expanded="false" />
+            <element signature="e#68072#68102#0" expanded="false" />
+            <element signature="e#68380#68410#0" expanded="false" />
+            <element signature="e#71443#71444#0" expanded="false" />
+            <element signature="e#71524#71525#0" expanded="false" />
+            <element signature="e#77141#77171#0" expanded="false" />
+            <element signature="e#77432#77462#0" expanded="false" />
+            <element signature="e#77723#77753#0" expanded="false" />
+            <element signature="e#78025#78055#0" expanded="false" />
+            <element signature="e#78321#78351#0" expanded="false" />
+            <element signature="e#78604#78634#0" expanded="false" />
+            <element signature="e#81688#81689#0" expanded="false" />
+            <element signature="e#81742#81743#0" expanded="false" />
+            <element signature="e#82552#82553#0" expanded="false" />
+            <element signature="e#82614#82615#0" expanded="false" />
+            <element signature="e#82649#82650#0" expanded="false" />
+            <element signature="e#82714#82715#0" expanded="false" />
+            <element signature="e#82758#82759#0" expanded="false" />
+            <element signature="e#82825#82826#0" expanded="false" />
+            <element signature="e#82861#82862#0" expanded="false" />
+            <element signature="e#82926#82927#0" expanded="false" />
+            <element signature="e#82966#82967#0" expanded="false" />
+            <element signature="e#83032#83033#0" expanded="false" />
+            <element signature="e#83073#83074#0" expanded="false" />
+            <element signature="e#83153#83154#0" expanded="false" />
+            <element signature="e#83188#83189#0" expanded="false" />
+            <element signature="e#83250#83251#0" expanded="false" />
+            <element signature="e#83292#83293#0" expanded="false" />
+            <element signature="e#83357#83358#0" expanded="false" />
+            <element signature="e#83415#83416#0" expanded="false" />
+            <element signature="e#83488#83489#0" expanded="false" />
+            <element signature="e#83550#83551#0" expanded="false" />
+            <element signature="e#83618#83619#0" expanded="false" />
+            <element signature="e#83673#83674#0" expanded="false" />
+            <element signature="e#83744#83745#0" expanded="false" />
+            <element signature="e#83799#83800#0" expanded="false" />
+            <element signature="e#83870#83871#0" expanded="false" />
+            <element signature="e#83900#83901#0" expanded="false" />
+            <element signature="e#83956#83957#0" expanded="false" />
+            <element signature="e#83991#83992#0" expanded="false" />
+            <element signature="e#84057#84058#0" expanded="false" />
+            <element signature="e#84185#84186#0" expanded="false" />
+            <element signature="e#84251#84252#0" expanded="false" />
+            <element signature="e#84332#84333#0" expanded="false" />
+            <element signature="e#84404#84405#0" expanded="false" />
+            <element signature="e#84468#84469#0" expanded="false" />
+            <element signature="e#84551#84552#0" expanded="false" />
+            <element signature="e#84605#84606#0" expanded="false" />
+            <element signature="e#84683#84684#0" expanded="false" />
+            <element signature="e#84745#84746#0" expanded="false" />
+            <element signature="e#84831#84832#0" expanded="false" />
+            <element signature="e#86062#86063#0" expanded="false" />
+            <element signature="e#86109#86110#0" expanded="false" />
+            <element signature="e#86174#86175#0" expanded="false" />
+            <element signature="e#86228#86229#0" expanded="false" />
+            <element signature="e#86489#86490#0" expanded="false" />
+            <element signature="e#86521#86522#0" expanded="false" />
+            <element signature="e#86571#86572#0" expanded="false" />
+            <element signature="e#86610#86611#0" expanded="false" />
+            <element signature="e#86806#86807#0" expanded="false" />
+            <element signature="e#86872#86873#0" expanded="false" />
+            <element signature="e#88520#88521#0" expanded="false" />
+            <element signature="e#88573#88574#0" expanded="false" />
+            <element signature="e#89118#89119#0" expanded="false" />
+            <element signature="e#89187#89188#0" expanded="false" />
+            <element signature="e#89841#89842#0" expanded="false" />
+            <element signature="e#89905#89906#0" expanded="false" />
+            <element signature="e#89931#89932#0" expanded="false" />
+            <element signature="e#89994#89995#0" expanded="false" />
+            <element signature="e#96714#96715#0" expanded="false" />
+            <element signature="e#96783#96784#0" expanded="false" />
+            <element signature="e#96818#96819#0" expanded="false" />
+            <element signature="e#96887#96888#0" expanded="false" />
+            <element signature="e#96932#96933#0" expanded="false" />
+            <element signature="e#97010#97011#0" expanded="false" />
+            <element signature="e#97058#97059#0" expanded="false" />
+            <element signature="e#97129#97130#0" expanded="false" />
+            <element signature="e#97166#97167#0" expanded="false" />
+            <element signature="e#97238#97239#0" expanded="false" />
+            <element signature="e#97278#97279#0" expanded="false" />
+            <element signature="e#97347#97348#0" expanded="false" />
+            <element signature="e#97390#97391#0" expanded="false" />
+            <element signature="e#97463#97464#0" expanded="false" />
+            <element signature="e#97658#97659#0" expanded="false" />
+            <element signature="e#97744#97745#0" expanded="false" />
+            <element signature="e#98225#98226#0" expanded="false" />
+            <element signature="e#98297#98298#0" expanded="false" />
+            <element signature="e#98367#98368#0" expanded="false" />
+            <element signature="e#98426#98427#0" expanded="false" />
+            <element signature="e#99511#99512#0" expanded="false" />
+            <element signature="e#99546#99547#0" expanded="false" />
+            <element signature="e#99614#99615#0" expanded="false" />
+            <element signature="e#99656#99657#0" expanded="false" />
+            <element signature="e#100283#100284#0" expanded="false" />
+            <element signature="e#100342#100343#0" expanded="false" />
+            <element signature="e#101602#101603#0" expanded="false" />
+            <element signature="e#101649#101650#0" expanded="false" />
+            <element signature="e#102253#102254#0" expanded="false" />
+            <element signature="e#102315#102316#0" expanded="false" />
+            <element signature="e#102350#102351#0" expanded="false" />
+            <element signature="e#102415#102416#0" expanded="false" />
+            <element signature="e#102464#102465#0" expanded="false" />
+            <element signature="e#102536#102537#0" expanded="false" />
+            <element signature="e#102589#102590#0" expanded="false" />
+            <element signature="e#102665#102666#0" expanded="false" />
+            <element signature="e#102700#102701#0" expanded="false" />
+            <element signature="e#102764#102765#0" expanded="false" />
+            <element signature="e#102804#102805#0" expanded="false" />
+            <element signature="e#102875#102876#0" expanded="false" />
+            <element signature="e#102913#102914#0" expanded="false" />
+            <element signature="e#102980#102981#0" expanded="false" />
+            <element signature="e#103044#103045#0" expanded="false" />
+            <element signature="e#103104#103105#0" expanded="false" />
+            <element signature="e#103134#103135#0" expanded="false" />
+            <element signature="e#103190#103191#0" expanded="false" />
+            <element signature="e#104256#104257#0" expanded="false" />
+            <element signature="e#104322#104323#0" expanded="false" />
+            <element signature="e#104357#104358#0" expanded="false" />
+            <element signature="e#104423#104424#0" expanded="false" />
+            <element signature="e#104717#104718#0" expanded="false" />
+            <element signature="e#104781#104782#0" expanded="false" />
+            <element signature="e#105022#105023#0" expanded="false" />
+            <element signature="e#105101#105102#0" expanded="false" />
+            <element signature="e#105177#105178#0" expanded="false" />
+            <element signature="e#105251#105252#0" expanded="false" />
+            <element signature="e#105482#105483#0" expanded="false" />
+            <element signature="e#105557#105558#0" expanded="false" />
+            <element signature="e#109174#109175#0" expanded="false" />
+            <element signature="e#109243#109244#0" expanded="false" />
+            <element signature="e#109874#109875#0" expanded="false" />
+            <element signature="e#109941#109942#0" expanded="false" />
+            <element signature="e#109970#109971#0" expanded="false" />
+            <element signature="e#110036#110037#0" expanded="false" />
+            <element signature="e#114419#114420#0" expanded="false" />
+            <element signature="e#114467#114468#0" expanded="false" />
+            <element signature="e#119897#119927#0" expanded="false" />
+            <element signature="e#119978#119979#0" expanded="false" />
+            <element signature="e#120033#120034#0" expanded="false" />
+            <element signature="e#120299#120329#1" expanded="false" />
+            <element signature="e#121469#121470#0" expanded="false" />
+            <element signature="e#121519#121520#0" expanded="false" />
+            <element signature="e#121574#121575#0" expanded="false" />
+            <element signature="e#121622#121623#0" expanded="false" />
+            <element signature="e#121677#121678#0" expanded="false" />
+            <element signature="e#121725#121726#0" expanded="false" />
+            <element signature="e#122528#122558#1" expanded="false" />
+            <element signature="e#124180#124181#0" expanded="false" />
+            <element signature="e#124229#124230#0" expanded="false" />
+            <element signature="e#125893#125894#0" expanded="false" />
+            <element signature="e#125947#125948#0" expanded="false" />
+            <element signature="e#128176#128177#0" expanded="false" />
+            <element signature="e#128224#128225#0" expanded="false" />
+            <element signature="e#131041#131042#0" expanded="false" />
+            <element signature="e#131117#131118#0" expanded="false" />
+            <element signature="e#131170#131171#0" expanded="false" />
+            <element signature="e#131248#131249#0" expanded="false" />
+            <element signature="e#134205#134206#0" expanded="false" />
+            <element signature="e#134291#134292#0" expanded="false" />
+            <element signature="e#137382#137383#0" expanded="false" />
+            <element signature="e#137448#137449#0" expanded="false" />
+            <element signature="e#137497#137498#0" expanded="false" />
+            <element signature="e#137556#137557#0" expanded="false" />
+            <element signature="e#137627#137628#0" expanded="false" />
+            <element signature="e#137694#137695#0" expanded="false" />
+            <element signature="e#138474#138475#0" expanded="false" />
+            <element signature="e#138533#138534#0" expanded="false" />
+            <element signature="e#138573#138574#0" expanded="false" />
+            <element signature="e#138632#138633#0" expanded="false" />
+            <element signature="e#138734#138735#0" expanded="false" />
+            <element signature="e#138800#138801#0" expanded="false" />
+            <element signature="e#139589#139590#0" expanded="false" />
+            <element signature="e#139625#139626#0" expanded="false" />
+            <element signature="e#139951#139952#0" expanded="false" />
+            <element signature="e#139992#139993#0" expanded="false" />
+            <element signature="e#144867#144897#0" expanded="false" />
+            <element signature="e#146154#146155#0" expanded="false" />
+            <element signature="e#146195#146196#0" expanded="false" />
+            <element signature="e#146594#146595#0" expanded="false" />
+            <element signature="e#146645#146646#0" expanded="false" />
+            <element signature="e#149201#149202#0" expanded="false" />
+            <element signature="e#149274#149275#0" expanded="false" />
+            <element signature="e#149849#149850#0" expanded="false" />
+            <element signature="e#149937#149938#0" expanded="false" />
+            <element signature="e#149985#150015#0" expanded="false" />
+            <element signature="e#150727#150757#0" expanded="false" />
+            <element signature="e#152952#152953#0" expanded="false" />
+            <element signature="e#153012#153013#0" expanded="false" />
+            <element signature="e#153068#153069#0" expanded="false" />
+            <element signature="e#153127#153128#0" expanded="false" />
+            <element signature="e#159181#159182#0" expanded="false" />
+            <element signature="e#159267#159268#0" expanded="false" />
+            <element signature="e#159318#159319#0" expanded="false" />
+            <element signature="e#159406#159407#0" expanded="false" />
+            <element signature="e#164752#164753#0" expanded="false" />
+            <element signature="e#164800#164801#0" expanded="false" />
+            <element signature="e#164852#164853#0" expanded="false" />
+            <element signature="e#164933#164934#0" expanded="false" />
+            <element signature="e#164986#164987#0" expanded="false" />
+            <element signature="e#165068#165069#0" expanded="false" />
+            <element signature="e#166919#166949#0" expanded="false" />
+            <element signature="e#167000#167001#0" expanded="false" />
+            <element signature="e#167065#167066#0" expanded="false" />
+            <element signature="e#167497#167498#0" expanded="false" />
+            <element signature="e#167551#167552#0" expanded="false" />
+            <element signature="e#168661#168691#0" expanded="false" />
+            <element signature="e#168750#168751#0" expanded="false" />
+            <element signature="e#168823#168824#0" expanded="false" />
+            <element signature="e#170028#170058#0" expanded="false" />
+            <element signature="e#170115#170116#0" expanded="false" />
+            <element signature="e#170189#170190#0" expanded="false" />
+            <element signature="e#170619#170648#0" expanded="false" />
+            <element signature="e#171446#171476#0" expanded="false" />
+            <element signature="e#171523#171524#0" expanded="false" />
+            <element signature="e#171564#171565#0" expanded="false" />
+            <element signature="e#172396#172397#0" expanded="false" />
+            <element signature="e#172450#172451#0" expanded="false" />
+            <element signature="e#172797#172798#0" expanded="false" />
+            <element signature="e#172837#172838#0" expanded="false" />
+            <element signature="e#173393#173423#0" expanded="false" />
+            <element signature="e#174126#174156#0" expanded="false" />
+            <element signature="e#174418#174447#0" expanded="false" />
+            <element signature="e#175227#175257#0" expanded="false" />
+            <element signature="e#175306#175307#0" expanded="false" />
+            <element signature="e#175349#175350#0" expanded="false" />
+            <element signature="e#175623#175624#0" expanded="false" />
+            <element signature="e#175669#175670#0" expanded="false" />
+            <element signature="e#175717#175718#0" expanded="false" />
+            <element signature="e#175767#175768#0" expanded="false" />
+            <element signature="e#176219#176220#0" expanded="false" />
+            <element signature="e#176295#176296#0" expanded="false" />
+            <element signature="e#176338#176339#0" expanded="false" />
+            <element signature="e#176414#176415#0" expanded="false" />
+            <element signature="e#176699#176700#0" expanded="false" />
+            <element signature="e#176755#176756#0" expanded="false" />
+            <element signature="e#176962#176963#0" expanded="false" />
+            <element signature="e#177016#177017#0" expanded="false" />
+            <element signature="e#177203#177204#0" expanded="false" />
+            <element signature="e#177244#177245#0" expanded="false" />
+            <element signature="e#177383#177412#0" expanded="false" />
+            <element signature="e#178177#178207#0" expanded="false" />
+            <element signature="e#178258#178259#0" expanded="false" />
+            <element signature="e#178301#178302#0" expanded="false" />
+            <element signature="e#178866#178896#0" expanded="false" />
+            <element signature="e#179623#179653#0" expanded="false" />
+            <element signature="e#180623#180624#0" expanded="false" />
+            <element signature="e#180699#180700#0" expanded="false" />
+            <element signature="e#180835#180865#0" expanded="false" />
+            <element signature="e#180922#180923#0" expanded="false" />
+            <element signature="e#180965#180966#0" expanded="false" />
+            <element signature="e#181055#181056#0" expanded="false" />
+            <element signature="e#181109#181110#0" expanded="false" />
+            <element signature="e#181339#181340#0" expanded="false" />
+            <element signature="e#181404#181405#0" expanded="false" />
+            <element signature="e#181481#181482#0" expanded="false" />
+            <element signature="e#181546#181547#0" expanded="false" />
+            <element signature="e#181629#181630#0" expanded="false" />
+            <element signature="e#181694#181695#0" expanded="false" />
+            <element signature="e#181756#181757#0" expanded="false" />
+            <element signature="e#181821#181822#0" expanded="false" />
+            <element signature="e#182706#182707#0" expanded="false" />
+            <element signature="e#182746#182747#0" expanded="false" />
+            <element signature="e#183154#183155#0" expanded="false" />
+            <element signature="e#183198#183199#0" expanded="false" />
+            <element signature="e#183375#183376#0" expanded="false" />
+            <element signature="e#183421#183422#0" expanded="false" />
+            <element signature="e#183668#183669#0" expanded="false" />
+            <element signature="e#183741#183742#0" expanded="false" />
+            <element signature="e#184416#184417#0" expanded="false" />
+            <element signature="e#184459#184460#0" expanded="false" />
+            <element signature="e#184897#184898#0" expanded="false" />
+            <element signature="e#184949#184950#0" expanded="false" />
+            <element signature="e#185013#185014#0" expanded="false" />
+            <element signature="e#185055#185056#0" expanded="false" />
+            <element signature="e#185733#185734#0" expanded="false" />
+            <element signature="e#185790#185791#0" expanded="false" />
+            <element signature="e#186025#186026#0" expanded="false" />
+            <element signature="e#186071#186072#0" expanded="false" />
+            <element signature="e#186135#186136#0" expanded="false" />
+            <element signature="e#186195#186196#0" expanded="false" />
+            <element signature="e#186276#186277#0" expanded="false" />
+            <element signature="e#186341#186342#0" expanded="false" />
+            <element signature="e#186747#186748#0" expanded="false" />
+            <element signature="e#186792#186793#0" expanded="false" />
+            <element signature="e#187167#187168#0" expanded="false" />
+            <element signature="e#187224#187225#0" expanded="false" />
+            <element signature="e#187662#187663#0" expanded="false" />
+            <element signature="e#187708#187709#0" expanded="false" />
+            <element signature="e#187789#187790#0" expanded="false" />
+            <element signature="e#187854#187855#0" expanded="false" />
+            <element signature="e#187932#187933#0" expanded="false" />
+            <element signature="e#187997#187998#0" expanded="false" />
+            <element signature="e#188141#188142#0" expanded="false" />
+            <element signature="e#188201#188202#0" expanded="false" />
+            <element signature="e#188769#188770#0" expanded="false" />
+            <element signature="e#188822#188823#0" expanded="false" />
+            <element signature="e#190010#190026#0" expanded="false" />
+            <element signature="e#190398#190399#0" expanded="false" />
+            <element signature="e#190458#190459#0" expanded="false" />
+            <element signature="e#190548#190549#0" expanded="false" />
+            <element signature="e#190591#190592#0" expanded="false" />
+            <element signature="e#190830#190831#0" expanded="false" />
+            <element signature="e#190895#190896#0" expanded="false" />
+            <element signature="e#190972#190973#0" expanded="false" />
+            <element signature="e#191037#191038#0" expanded="false" />
+            <element signature="e#191120#191121#0" expanded="false" />
+            <element signature="e#191185#191186#0" expanded="false" />
+            <element signature="e#191247#191248#0" expanded="false" />
+            <element signature="e#191312#191313#0" expanded="false" />
+            <element signature="e#193612#193613#0" expanded="false" />
+            <element signature="e#193644#193645#0" expanded="false" />
+            <element signature="e#193691#193692#0" expanded="false" />
+            <element signature="e#193748#193749#0" expanded="false" />
+            <element signature="e#193788#193789#0" expanded="false" />
+            <element signature="e#193839#193840#0" expanded="false" />
+            <element signature="e#193883#193884#0" expanded="false" />
+            <element signature="e#193938#193939#0" expanded="false" />
+            <element signature="e#194394#194424#0" expanded="false" />
+            <element signature="e#195578#195579#0" expanded="false" />
+            <element signature="e#195653#195654#0" expanded="false" />
+            <element signature="e#195716#195717#0" expanded="false" />
+            <element signature="e#195802#195803#0" expanded="false" />
+            <element signature="e#195867#195868#0" expanded="false" />
+            <element signature="e#195920#195921#0" expanded="false" />
+            <element signature="e#196976#197006#0" expanded="false" />
+            <element signature="e#197058#197059#0" expanded="false" />
+            <element signature="e#197128#197129#0" expanded="false" />
+            <element signature="e#197522#197523#0" expanded="false" />
+            <element signature="e#197569#197570#0" expanded="false" />
+            <element signature="e#197724#197725#0" expanded="false" />
+            <element signature="e#197780#197781#0" expanded="false" />
+            <element signature="e#199575#199576#0" expanded="false" />
+            <element signature="e#199625#199626#0" expanded="false" />
+            <element signature="e#199856#199857#0" expanded="false" />
+            <element signature="e#199921#199922#0" expanded="false" />
+            <element signature="e#199982#199983#0" expanded="false" />
+            <element signature="e#200016#200017#0" expanded="false" />
+            <element signature="e#200646#200647#0" expanded="false" />
+            <element signature="e#200696#200697#0" expanded="false" />
+            <element signature="e#200734#200735#0" expanded="false" />
+            <element signature="e#200781#200782#0" expanded="false" />
+            <element signature="e#201866#201867#0" expanded="false" />
+            <element signature="e#201924#201925#0" expanded="false" />
+            <element signature="e#210534#210535#0" expanded="false" />
+            <element signature="e#210578#210579#0" expanded="false" />
+            <element signature="e#212293#212294#0" expanded="false" />
+            <element signature="e#212334#212335#0" expanded="false" />
+            <element signature="e#212415#212416#0" expanded="false" />
+            <element signature="e#212464#212465#0" expanded="false" />
+            <element signature="e#213891#213892#0" expanded="false" />
+            <element signature="e#213938#213939#0" expanded="false" />
+            <element signature="e#215786#215787#0" expanded="false" />
+            <element signature="e#215835#215836#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db_info/insert.sql">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="132">
+          <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/ProductType.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        <state relative-caret-position="132">
+          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/ProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+    <entry file="dbDummy://dbtable:/b856a134/75ed912b-c3da-4080-b8a6-7c061d96e097/ecommerce.sales_records" />
+    <entry file="dbDummy://dbtable:/b856a134/b9213ac4-1f3d-4ba5-b727-377ac078b653/main.salesman">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/feae7b7b-1249-4912-aa1e-7c9941d7561c/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/ProductDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesmanDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1924">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="31" column="66" lean-forward="false" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/75ed912b-c3da-4080-b8a6-7c061d96e097/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9213ac4-1f3d-4ba5-b727-377ac078b653/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/constant/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="134" lean-forward="false" selection-start-line="33" selection-start-column="134" selection-end-line="33" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/styles/glyphs.css">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/styles/glyphs_blue.css">
+    <entry file="dbDummy://dbtable:/b856a134/75ed912b-c3da-4080-b8a6-7c061d96e097/ecommerce.salesman" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.23.1/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc3/JDBC3PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-409">
+          <caret line="349" column="0" lean-forward="false" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/GlyphIcon.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/listener/ComboBoxAutoComplete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/GlyphIcons.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/GlyphsBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/octicons/OctIcon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/fontawesome/FontAwesomeIcon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4004">
-          <caret line="157" column="9" lean-forward="false" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="9" />
+        <state relative-caret-position="182">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="50" column="21" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="226">
+          <caret line="101" column="39" lean-forward="false" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/AlertUtil.java">
+    <entry file="jar://D:/Softwares/Java_Paltforms/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/fontawesome/FontAwesomeIcon.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/ProductDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="122" column="14" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <marker date="1570707652750" expanded="true" signature="527:606" ph="INSERT INTO products... " />
+            <marker date="1570707652750" expanded="true" signature="648:736" ph="UPDATE produ... " />
+            <marker date="1570707652750" expanded="true" signature="778:811" ph="DELETE FROM " />
+            <marker date="1570707652750" expanded="true" signature="857:892" ph="SELECT * FRO... products" />
+            <marker date="1570707652750" expanded="true" signature="938:960" ph="SELECT * FRO... products" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/ProductTypeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="52" column="40" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesmanDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ControllerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/DatabaseUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1274">
-          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="-1438">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/style/styles.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/DateTimeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state relative-caret-position="546">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="158" column="66" lean-forward="false" selection-start-line="158" selection-start-column="66" selection-end-line="158" selection-end-column="66" />
-          <folding>
-            <element signature="e#5394#5395#0" expanded="true" />
-            <element signature="e#5423#5424#0" expanded="true" />
-            <element signature="e#5743#5744#0" expanded="true" />
-            <element signature="e#5783#5784#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-17">
+          <caret line="114" column="7" lean-forward="true" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="88">
+          <caret line="116" column="93" lean-forward="false" selection-start-line="116" selection-start-column="93" selection-end-line="116" selection-end-column="93" />
+          <folding>
+            <element signature="e#2112#2200#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateProductTypeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesmanController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CreateSalesRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/inteface/DispatcherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/ProductTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="84" column="61" lean-forward="false" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SalesmanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="190" column="61" lean-forward="false" selection-start-line="190" selection-start-column="61" selection-end-line="190" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="116">
+          <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="124" column="79" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="124" selection-end-column="79" />
+        <state relative-caret-position="3770">
+          <caret line="184" column="39" lean-forward="false" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
           <folding>
-            <element signature="method#setData#0;class#ProductController#0" expanded="false" />
-            <element signature="method#setFilterField#0;class#ProductController#0" expanded="false" />
+            <element signature="e#7376#7377#0" expanded="false" />
+            <element signature="e#7410#7411#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/ProductTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3052">
+          <caret line="173" column="58" lean-forward="false" selection-start-line="173" selection-start-column="58" selection-end-line="173" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SalesmanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+            <element signature="e#1927#1928#0" expanded="false" />
+            <element signature="e#1958#1959#0" expanded="false" />
+            <element signature="e#2014#2015#0" expanded="false" />
+            <element signature="e#2048#2049#0" expanded="false" />
+            <element signature="e#3505#3506#0" expanded="false" />
+            <element signature="e#3534#3535#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="e#5441#5442#0" expanded="false" />
+            <element signature="e#5475#5476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding>
+            <element signature="e#258#259#0" expanded="false" />
+            <element signature="e#304#305#0" expanded="false" />
+            <element signature="e#373#374#0" expanded="false" />
+            <element signature="e#407#408#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#753#754#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
+            <element signature="e#981#982#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/SalesRecords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="96" column="18" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+          <folding>
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#543#544#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#621#622#0" expanded="false" />
+            <element signature="e#652#653#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#786#787#0" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
+            <element signature="e#895#896#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1010#1011#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1262#1263#0" expanded="false" />
+            <element signature="e#1293#1294#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1420#1421#0" expanded="false" />
+            <element signature="e#1453#1454#0" expanded="false" />
+            <element signature="e#1505#1506#0" expanded="false" />
+            <element signature="e#1549#1550#0" expanded="false" />
+            <element signature="e#1587#1588#0" expanded="false" />
+            <element signature="e#1621#1622#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
+            <element signature="e#1721#1722#0" expanded="false" />
+            <element signature="e#1750#1751#0" expanded="false" />
+            <element signature="e#1777#1778#0" expanded="false" />
+            <element signature="e#1815#1816#0" expanded="false" />
+            <element signature="e#1847#1848#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/AlertUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding>
+            <element signature="e#1106#1107#0" expanded="false" />
+            <element signature="e#1154#1155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateSalesmanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b856a134/b9213ac4-1f3d-4ba5-b727-377ac078b653/main.sales_records">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/ValidationUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/UpdateProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/SalesRecordsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="205">
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b9213ac4-1f3d-4ba5-b727-377ac078b653/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/dao/impl/SalesRecordsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        <state relative-caret-position="80">
+          <caret line="250" column="70" lean-forward="false" selection-start-line="250" selection-start-column="70" selection-end-line="250" selection-end-column="70" />
           <folding>
-            <marker date="1564393624325" expanded="true" signature="525:629" ph="INSERT INTO sales_records... " />
-            <marker date="1564393624325" expanded="true" signature="671:765" ph="UPDATE sales... " />
-            <marker date="1564393624325" expanded="true" signature="807:845" ph="DELETE FROM " />
-            <marker date="1564393624325" expanded="true" signature="891:931" ph="SELECT * FRO... sales_records" />
-            <marker date="1564393624325" expanded="true" signature="977:1004" ph="SELECT * FRO... sales_records" />
+            <element signature="method#insertSalesRecord#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+            <element signature="method#deleteSalesRecord#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+            <element signature="method#findAllSalesRecords#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+            <element signature="method#updateSalesRecordFullyById#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+            <element signature="method#uploadImageBySalesRecordId#0;class#SalesRecordsDaoImpl#0" expanded="false" />
+            <marker date="1570782506227" expanded="true" signature="848:955" ph="INSERT INTO sales_records... " />
+            <marker date="1570782506227" expanded="true" signature="997:1106" ph="UPDATE sales... " />
+            <marker date="1570782506227" expanded="true" signature="1148:1186" ph="DELETE FROM " />
+            <marker date="1570782506227" expanded="true" signature="1232:1272" ph="SELECT * FRO... sales_records" />
+            <marker date="1570782506227" expanded="true" signature="1318:1345" ph="SELECT * FRO... sales_records" />
+            <marker date="1570782506227" expanded="true" signature="1389:1521" ph="UPDATE sales... " />
+            <marker date="1570782506227" expanded="true" signature="1565:1613" ph="UPDATE sales... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utility/FilterUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/product_brief.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="-446">
+          <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/dto/SalesRecordsDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+          <folding>
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SalesRecordsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="315" column="25" lean-forward="false" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
+        <state relative-caret-position="-601">
+          <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
           <folding>
-            <element signature="e#3689#4367#0" expanded="true" />
-            <element signature="e#4366#4367#0" expanded="true" />
-            <element signature="e#5174#6205#0" expanded="true" />
-            <element signature="e#6204#6205#0" expanded="true" />
-            <element signature="method#populateSalesRecordsTable#0;class#SalesRecordsController#0" expanded="false" />
-            <element signature="e#8761#9388#0" expanded="false" />
-            <element signature="method#addRow#0;class#SalesRecordsController#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#4327:4711" expanded="false" />
+            <element signature="e#5244#5810#0" expanded="false" />
+            <element signature="e#5859#6423#0" expanded="false" />
+            <element signature="e#6465#7054#0" expanded="false" />
+            <element signature="e#7101#7666#0" expanded="false" />
             <element signature="method#setData#0;class#SalesRecordsController#0" expanded="false" />
             <element signature="method#setFilterField#0;class#SalesRecordsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/BriefController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="253" column="31" lean-forward="false" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onMousePressed#0;class#BriefController#0" expanded="false" />
+            <element signature="method#onMouseDragged#0;class#BriefController#0" expanded="false" />
+            <element signature="method#max#0;class#BriefController#0" expanded="false" />
+            <element signature="method#initialize#0;class#BriefController#0" expanded="false" />
+            <element signature="e#4569#5328#0" expanded="false" />
+            <element signature="e#5635#5878#0" expanded="false" />
+            <element signature="e#5929#6168#0" expanded="false" />
+            <element signature="e#6212#6540#0" expanded="false" />
+            <element signature="e#7672#7673#0" expanded="true" />
+            <element signature="e#7706#7707#0" expanded="true" />
+            <element signature="method#showAllCalculations#0;class#BriefController#0" expanded="false" />
+            <element signature="method#calculateSellingPrice#0;class#BriefController#0" expanded="false" />
+            <element signature="method#calculateOverallSellingPrice#0;class#BriefController#0" expanded="false" />
+            <element signature="method#calculateOverallProfit#0;class#BriefController#0" expanded="false" />
+            <element signature="method#formatToCurrencyStandard#0;class#BriefController#0" expanded="false" />
+            <element signature="method#fillForm#0;class#BriefController#0" expanded="false" />
+            <element signature="method#updateFully#0;class#BriefController#0" expanded="false" />
+            <element signature="e#12426#12914#0" expanded="true" />
+            <element signature="e#12913#12914#0" expanded="true" />
+            <element signature="method#updateTask#0;class#BriefController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1887,6 +2668,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

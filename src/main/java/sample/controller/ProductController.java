@@ -77,10 +77,10 @@ public class ProductController implements Initializable,DispatcherController<Pro
 
         product_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         colProductId.setMaxWidth(1f*Integer.MAX_VALUE * 10);
-        colProductName.setMaxWidth(1f*Integer.MAX_VALUE * 20);
+        colProductName.setMaxWidth(1f*Integer.MAX_VALUE * 30);
         colProductType.setMaxWidth(1f*Integer.MAX_VALUE * 20);
-        colProductDescription.setMaxWidth(1f*Integer.MAX_VALUE * 30);
-        colPoruductAction.setMaxWidth(1f*Integer.MAX_VALUE * 20);
+        colProductDescription.setMaxWidth(1f*Integer.MAX_VALUE * 20);
+        colPoruductAction.setMaxWidth(1f*Integer.MAX_VALUE * 30);
 
         Callback<TableColumn<ProductDto,String>,TableCell<ProductDto,String>> cellFactory = (param)->{
           final TableCell<ProductDto,String> cell = new TableCell<ProductDto,String>(){
@@ -150,7 +150,6 @@ public class ProductController implements Initializable,DispatcherController<Pro
         productDao = DatabaseUtil.getProductDao();
 
         try {
-            System.out.println("products: " + productDao.findAllProducts());
             productDao.findAllProducts().stream().forEach(product -> {
                 ProductDto productDto = new ProductDto();
                 productDto.setId(product.getId());
@@ -174,8 +173,6 @@ public class ProductController implements Initializable,DispatcherController<Pro
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
-        System.out.println("stage nullable: " + (stage==null));
-
     }
 
     @Override
@@ -186,13 +183,12 @@ public class ProductController implements Initializable,DispatcherController<Pro
     @Override
     public void setFilterField(JFXTextField filterField) {
         this.filterField = filterField;
-        System.out.println("filterfield nullable: " + (filterField==null));
         filterUtil = new FilterUtil(this.filterField,product_table,list);
         filterUtil.initFilter();
     }
 
     @Override
-    public void setMainBtns(JFXButton btn, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton btn, JFXButton deleteBtn,JFXButton brief_btn) {
         this.toExcelBtn = btn;
 
         this.toExcelBtn.setOnAction(event -> {

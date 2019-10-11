@@ -10,30 +10,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sample.Main;
 import sample.inteface.DispatcherController;
-import sample.model.Product;
-import sample.model.ProductType;
-import sample.model.SalesRecords;
-import sample.model.Salesman;
 import sample.utility.AlertUtil;
 
-
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.net.URL;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
 
 public class Controller  implements Initializable{
     private Stage stage;
@@ -59,6 +52,8 @@ public class Controller  implements Initializable{
     private JFXButton add_btn;
     @FXML
     private JFXButton delete_btn;
+    @FXML
+    private JFXButton brief_btn;
     @FXML
     private JFXButton toExcelBtn;
     private List<JFXButton> btnList;
@@ -94,7 +89,9 @@ public class Controller  implements Initializable{
     public void loadProducts(){
         setDefaultColor();
         delete_btn.setVisible(false);
+        brief_btn.setVisible(false);
         add_btn.setVisible(true);
+        add_btn.setPrefWidth(157);
         selectedView = "product";
         this.product_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("product");
@@ -104,7 +101,9 @@ public class Controller  implements Initializable{
     private void loadDetailed(){
         setDefaultColor();
         delete_btn.setVisible(true);
+        brief_btn.setVisible(true);
         add_btn.setVisible(false);
+        add_btn.setPrefWidth(0);
         selectedView = "sales_record";
         this.attachment_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("sales_record");
@@ -114,7 +113,9 @@ public class Controller  implements Initializable{
     private void loadSalesman(){
         setDefaultColor();
         delete_btn.setVisible(false);
+        brief_btn.setVisible(false);
         add_btn.setVisible(true);
+        add_btn.setPrefWidth(157);
         selectedView = "salesman";
         this.salesman_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("salesman");
@@ -124,7 +125,9 @@ public class Controller  implements Initializable{
     private void loadProductType(){
         setDefaultColor();
         delete_btn.setVisible(false);
+        brief_btn.setVisible(false);
         add_btn.setVisible(true);
+        add_btn.setPrefWidth(157);
         selectedView = "product_type";
         this.prod_type_btn.setStyle("-fx-background-color: #36A5BE;");
         loadUI("product_type");
@@ -156,8 +159,7 @@ public class Controller  implements Initializable{
             dispatcherController = loader.getController();
             dispatcherController.setStage(stage);
             dispatcherController.setFilterField(filterField);
-            dispatcherController.setMainBtns(toExcelBtn,delete_btn);
-            new FadeIn(root).play();
+            dispatcherController.setMainBtns(toExcelBtn,delete_btn,brief_btn);
         } catch (IOException e) {
            e.printStackTrace();
         }

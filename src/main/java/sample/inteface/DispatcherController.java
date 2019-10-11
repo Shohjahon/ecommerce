@@ -17,5 +17,5 @@ public interface DispatcherController<T> {
 
     void setFilterField(JFXTextField filterField);
 
-    void setMainBtns(JFXButton export,JFXButton deleteBtn);
+    void setMainBtns(JFXButton export,JFXButton deleteBtn,JFXButton brief_btn);
 }

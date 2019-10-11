@@ -56,9 +56,9 @@
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="197.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="147.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот номи: " textFill="WHITE">
@@ -74,7 +74,7 @@
                         <Font name="Century Gothic" size="17.0" />
                     </font>
                 </JFXTextField>
-                <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури" textFill="WHITE" GridPane.rowIndex="1">
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури:" textFill="WHITE" GridPane.rowIndex="1">
                     <font>
                         <Font name="Century Gothic" size="17.0" />
                     </font>
@@ -82,7 +82,7 @@
                         <Insets left="15.0" />
                     </padding>
                 </Label>
-                <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот ҳақида" textFill="WHITE" GridPane.rowIndex="2">
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот ҳақида:" textFill="WHITE" GridPane.rowIndex="2">
                     <font>
                         <Font name="Century Gothic" size="17.0" />
                     </font>

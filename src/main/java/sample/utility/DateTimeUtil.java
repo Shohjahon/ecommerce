@@ -22,4 +22,9 @@ public class DateTimeUtil {
                 .toLocalDateTime();
     }
 
+    public static LocalDate convertToLocalDate(Date dateToConvert) {
+        return Instant.ofEpochMilli(dateToConvert.getTime())
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+    }
 }

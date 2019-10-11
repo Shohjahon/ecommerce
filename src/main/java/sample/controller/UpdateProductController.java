@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import sample.dao.ProductDao;
 import sample.dao.ProductTypeDao;
 import sample.inteface.DispatcherController;
@@ -68,7 +71,6 @@ public class UpdateProductController implements Initializable,DispatcherControll
                     "Дастур билан боғлиқ хатолик юз берди!  \n" +
                             "Илтимос дастур администратори билан боғланинг! ");
         }
-
     }
 
     @Override
@@ -77,7 +79,7 @@ public class UpdateProductController implements Initializable,DispatcherControll
     }
 
     @Override
-    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn,JFXButton brief_btn) {
 
     }
 
@@ -86,6 +88,7 @@ public class UpdateProductController implements Initializable,DispatcherControll
     public void handleUpdateProduct(){
         String pName = productNameField.getText();
         String des = productDescriptionField.getText();
+
         ProductType productType = (ProductType) productTypesBox.getValue();
 
         boolean isValid = (pName.isEmpty() || productType == null);
@@ -96,7 +99,6 @@ public class UpdateProductController implements Initializable,DispatcherControll
             product.setProductType(productType);
             product.setId(productDto.getId());
             try {
-                System.out.println("product updating ------> " + product.printProduct());
                 productDao.updateProduct(product);
                 productDtos.set(index,ProductDto.mapToProductDto(product));
                 handleCancel();

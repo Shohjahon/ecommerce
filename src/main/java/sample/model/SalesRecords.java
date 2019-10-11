@@ -12,8 +12,36 @@ public class SalesRecords {
     private Double inputPrice;
     private Double outputPrice;
     private Date date;
+    private byte[] imageBody;
+    private Integer quantity;
+    private Double sellingCoefficient;
+
 
     public SalesRecords() {
+    }
+
+    public byte[] getImageBody() {
+        return imageBody;
+    }
+
+    public void setImageBody(byte[] imageBody) {
+        this.imageBody = imageBody;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getSellingCoefficient() {
+        return sellingCoefficient;
+    }
+
+    public void setSellingCoefficient(Double sellingCoefficient) {
+        this.sellingCoefficient = sellingCoefficient;
     }
 
     public Integer getId() {
@@ -68,12 +96,13 @@ public class SalesRecords {
     @Override
     public String toString() {
         return "SalesRecords{" +
-                "id=" + id +
-                ", product=" + product +
+                "product=" + product +
                 ", salesman=" + salesman +
                 ", inputPrice=" + inputPrice +
                 ", outputPrice=" + outputPrice +
                 ", date=" + date +
+                ", quantity=" + quantity +
+                ", sellingCoefficient=" + sellingCoefficient +
                 '}';
     }
 }

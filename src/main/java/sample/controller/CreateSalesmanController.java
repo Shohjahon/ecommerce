@@ -96,7 +96,7 @@ public class CreateSalesmanController implements Initializable,DispatcherControl
     }
 
     @Override
-    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn,JFXButton brief_btn) {
 
     }
 

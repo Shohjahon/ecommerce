@@ -9,42 +9,34 @@ import javafx.beans.property.StringProperty;
  * Created by Shoh Jahon on 3/31/2019.
  */
 public class ProductType {
-    private final IntegerProperty id = new SimpleIntegerProperty();
-    private final StringProperty productType = new SimpleStringProperty();
+    private Integer id;
+    private String productType;
 
-    public ProductType(String productType){
-        this.productType.set(productType);
+    public ProductType(String productType) {
+        this.productType = productType;
     }
 
     public ProductType() {
     }
 
-    public int getId() {
-        return id.get();
-    }
-
-    public IntegerProperty idProperty() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id.set(id);
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getProductType() {
-        return productType.get();
-    }
-
-    public StringProperty productTypeProperty() {
         return productType;
     }
 
     public void setProductType(String productType) {
-        this.productType.set(productType);
+        this.productType = productType;
     }
 
     @Override
     public String toString() {
-        return productType.getValue();
+        return productType;
     }
 }

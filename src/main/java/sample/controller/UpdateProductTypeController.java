@@ -3,8 +3,6 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -59,7 +57,7 @@ public class UpdateProductTypeController implements Initializable,DispatcherCont
     }
 
     @Override
-    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn,JFXButton brief_btn) {
 
     }
 

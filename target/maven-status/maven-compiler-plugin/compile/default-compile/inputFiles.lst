@@ -1,10 +1,11 @@
+D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\model\Statistics.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\dao\ProductDao.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\utility\DateTimeUtil.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\UpdateSalesmanController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\listener\ComboBoxAutoComplete.java
-D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\CreateSalesRecordController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\UpdateProductTypeController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\model\dto\SalesmanDto.java
+D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\BriefController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\ProductController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\utility\AlertUtil.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\model\dto\SalesRecordsDto.java
@@ -27,6 +28,7 @@ D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\CreateProduc
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\utility\ControllerUtil.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\CreateProductController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\dao\impl\ProductDaoImpl.java
+D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\utility\ValidationUtil.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\dao\impl\ProductTypeDaoImpl.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\controller\UpdateProductController.java
 D:\Source_Codes\Intellij\E-Commerce\src\main\java\sample\dao\impl\SalesmanDaoImpl.java

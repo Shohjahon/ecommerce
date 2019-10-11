@@ -70,7 +70,6 @@ public class ProductDaoImpl implements ProductDao{
     @Override
     public void insertProduct(Product product) throws Exception {
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
-            System.out.println("saving product..... -> " + product);
             connection.setAutoCommit(false);
             statement.setString(1,product.getProductName());
             statement.setInt(2,product.getProductType().getId());
@@ -88,7 +87,6 @@ public class ProductDaoImpl implements ProductDao{
     @Override
     public void updateProduct(Product product) throws Exception {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_SQL)){
-            System.out.println("inside update: " + product.printProduct());
             connection.setAutoCommit(false);
             statement.setString(1,product.getProductName());
             statement.setInt(2,product.getProductType().getId());
@@ -115,9 +113,7 @@ public class ProductDaoImpl implements ProductDao{
                     product.setProductName(result.getString("product_name"));
                     product.setDescription(result.getString("description"));
                     Integer pId = result.getInt("id_product_type");
-                    System.out.println("findAllProducts->productTypeId"+pId);
                     ProductType productType = productTypeDao.findProductTypeById(pId);
-                    System.out.println("pId: "+productType);
                     product.setProductType(productTypeDao.findProductTypeById(result.getInt("id_product_type")));
                     list.add(product);
                 }

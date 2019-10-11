@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="pane" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.BriefController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Ҳисобот ҳақида батафсил маълумот">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="650.0">
+                     <children>
+                        <ImageView fx:id="record_image" fitHeight="250.0" fitWidth="270.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../image/no.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="upload_img" layoutX="89.0" layoutY="271.0" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #346F7C;" text="Расм юклаш" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="1.3em" />
+                           </graphic>
+                        </JFXButton>
+                        <Separator layoutX="317.0" orientation="VERTICAL" prefHeight="320.0" />
+                        <Separator layoutX="6.0" layoutY="321.0" prefHeight="3.0" prefWidth="787.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="7.0" />
+                        <ComboBox fx:id="product_box" layoutX="336.0" layoutY="46.0" prefWidth="180.0" promptText="Маҳсулот" />
+                        <ComboBox fx:id="salesman_box" layoutX="524.0" layoutY="46.0" prefWidth="250.0" promptText="Кимдан олинган" />
+                        <JFXTextField fx:id="input_price" focusColor="#346f7c" labelFloat="true" layoutX="336.0" layoutY="112.0" prefWidth="180.0" promptText="Келиш нархи" />
+                        <JFXTextField fx:id="selling_coeffitsient" focusColor="#346f7c" labelFloat="true" layoutX="524.0" layoutY="112.0" prefWidth="250.0" promptText="Сотиш коеффициенти ( % )" />
+                        <JFXTextField fx:id="quantity" focusColor="#346f7c" labelFloat="true" layoutX="336.0" layoutY="174.0" prefWidth="180.0" promptText="Маҳсулот сони" />
+                        <JFXDatePicker fx:id="createdDate" defaultColor="#346f7c" layoutX="524.0" layoutY="174.0" prefWidth="250.0" promptText="Қўшилган сана" />
+                        <JFXButton fx:id="addBtn" layoutX="487.0" layoutY="271.0" onAction="#updateFully" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #2CAC68;" text="Ўзгартириш" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="1.3em" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="21.0" layoutY="345.0" text="Чегирма(%):">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="sale" focusColor="#346f7c" layoutX="123.0" layoutY="342.0" />
+                        <Separator layoutX="317.0" layoutY="320.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="320.0" />
+                        <Label layoutX="336.0" layoutY="346.0" text="Бир донасининг сотилиш нархи: ">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="singlePoroductPrice" layoutX="598.0" layoutY="348.0" text="_ _ _">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="336.0" layoutY="381.0" text="Маҳсулотнинг умумий тан нархи: ">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="wholeSalePrice" layoutX="603.0" layoutY="383.0" text="_ _ _">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="336.0" layoutY="446.0" text="Умумий фойда: ">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="overallProfit" layoutX="471.0" layoutY="446.0" text="_ _ _">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="337.0" layoutY="415.0" text="Маҳсулотнинг умумий сотилиш нархи: ">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="wholeSaleSellingPrice" layoutX="644.0" layoutY="417.0" text="_ _ _">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="337.0" layoutY="15.0" text="Маҳсулот">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="524.0" layoutY="15.0" text="Кимдан олинган">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="backBtn" layoutX="631.0" layoutY="271.0" onAction="#backToMain" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #7C4749;" text="Ортга" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="1.3em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXProgressBar fx:id="updateProgressBar" layoutX="24.0" layoutY="433.0" prefHeight="16.0" prefWidth="265.0" />
+                        <Label fx:id="progressLabel" layoutX="42.0" layoutY="403.0" text="Ҳисобот ўзгартирилмоқда .  .  . ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Ҳисоботнинг бир ойлик статистикаси">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#33575e" layoutX="136.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Жорий маҳсулотга сарфланган пулнинг бир ойлик статистикаси">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <LineChart fx:id="statistics" layoutX="37.0" layoutY="64.0" prefHeight="397.0" prefWidth="734.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER_RIGHT" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #dfe4ea;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="#48dbfb" glyphName="MINUS" onMouseClicked="#min" size="1.5em">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#1dd1a1" glyphName="CIRCLE" onMouseClicked="#max" size="1.5em">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#ee5253" glyphName="CLOSE" onMouseClicked="#close" size="1.5em">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

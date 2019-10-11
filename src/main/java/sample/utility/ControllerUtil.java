@@ -49,6 +49,5 @@ public class ControllerUtil<T>{
         controller.setData(list,dto,index);
         controller.setStage(stage);
         stage.show();
-        Platform.runLater(()->new ZoomIn(root).play());
     }
 }

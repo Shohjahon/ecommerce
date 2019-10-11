@@ -2,9 +2,13 @@ package sample.model.dto;
 
 import com.sun.org.apache.regexp.internal.RE;
 import javafx.beans.property.*;
+import sample.model.Product;
+import sample.model.ProductType;
 import sample.model.SalesRecords;
+import sample.model.Salesman;
 import sample.utility.DateTimeUtil;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -14,28 +18,52 @@ import java.util.Date;
  */
 public class SalesRecordsDto {
     private IntegerProperty id = new SimpleIntegerProperty();
-    private StringProperty productName = new SimpleStringProperty();
+    private ObjectProperty<Product> productName = new SimpleObjectProperty<>();
     private DoubleProperty inputPrice = new SimpleDoubleProperty();
     private DoubleProperty outputPrice = new SimpleDoubleProperty();
-    private StringProperty salesmanName = new SimpleStringProperty();
-    private StringProperty productTypeName = new SimpleStringProperty();
-    private ObjectProperty<LocalDateTime> date = new SimpleObjectProperty<>();
+    private ObjectProperty<Salesman> salesmanName = new SimpleObjectProperty<>();
+    private ObjectProperty<ProductType> productTypeName = new SimpleObjectProperty<>();
+    private ObjectProperty<LocalDate> date = new SimpleObjectProperty<>();
 
     public SalesRecordsDto() {
     }
 
-    public LocalDateTime getDate() {
-        return date.get();
+    public Product getProductName() {
+        return productName.get();
     }
 
-
-    public ObjectProperty<LocalDateTime> dateProperty() {
-        return date;
+    public ObjectProperty<Product> productNameProperty() {
+        return productName;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date.set(date);
+    public void setProductName(Product productName) {
+        this.productName.set(productName);
     }
+
+    public Salesman getSalesmanName() {
+        return salesmanName.get();
+    }
+
+    public ObjectProperty<Salesman> salesmanNameProperty() {
+        return salesmanName;
+    }
+
+    public void setSalesmanName(Salesman salesmanName) {
+        this.salesmanName.set(salesmanName);
+    }
+
+    public ProductType getProductTypeName() {
+        return productTypeName.get();
+    }
+
+    public ObjectProperty<ProductType> productTypeNameProperty() {
+        return productTypeName;
+    }
+
+    public void setProductTypeName(ProductType productTypeName) {
+        this.productTypeName.set(productTypeName);
+    }
+
 
     public int getId() {
         return id.get();
@@ -49,19 +77,8 @@ public class SalesRecordsDto {
         this.id.set(id);
     }
 
-    public String getProductName() {
-        return productName.get();
-    }
 
-    public StringProperty productNameProperty() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName.set(productName);
-    }
-
-    public double getInputPrice() {
+    public Double getInputPrice() {
         return inputPrice.get();
     }
 
@@ -69,11 +86,11 @@ public class SalesRecordsDto {
         return inputPrice;
     }
 
-    public void setInputPrice(double inputPrice) {
+    public void setInputPrice(Double inputPrice) {
         this.inputPrice.set(inputPrice);
     }
 
-    public double getOutputPrice() {
+    public Double getOutputPrice() {
         return outputPrice.get();
     }
 
@@ -81,44 +98,61 @@ public class SalesRecordsDto {
         return outputPrice;
     }
 
+    public void setOutputPrice(Double outputPrice) {
+        this.outputPrice.set(outputPrice);
+    }
+
+    public void setInputPrice(double inputPrice) {
+        this.inputPrice.set(inputPrice);
+    }
+
     public void setOutputPrice(double outputPrice) {
         this.outputPrice.set(outputPrice);
     }
 
-    public String getSalesmanName() {
-        return salesmanName.get();
+    public LocalDate getDate() {
+        return date.get();
     }
 
-    public StringProperty salesmanNameProperty() {
-        return salesmanName;
+    public ObjectProperty<LocalDate> dateProperty() {
+        return date;
     }
 
-    public void setSalesmanName(String salesmanName) {
-        this.salesmanName.set(salesmanName);
-    }
-
-    public String getProductTypeName() {
-        return productTypeName.get();
-    }
-
-    public StringProperty productTypeNameProperty() {
-        return productTypeName;
-    }
-
-    public void setProductTypeName(String productTypeName) {
-        this.productTypeName.set(productTypeName);
+    public void setDate(LocalDate date) {
+        this.date.set(date);
     }
 
     public static SalesRecordsDto mapToSalesRecordsDto(SalesRecords salesRecords){
         SalesRecordsDto dto = new SalesRecordsDto();
         dto.setId(salesRecords.getId());
-        dto.setProductName(salesRecords.getProduct().getProductName());
-        dto.setProductTypeName(salesRecords.getProduct().getProductType().getProductType());
-        dto.setSalesmanName(salesRecords.getSalesman().getFullName());
+        dto.setProductName(salesRecords.getProduct());
+        dto.setProductTypeName(salesRecords.getProduct().getProductType());
+        dto.setSalesmanName(salesRecords.getSalesman());
         dto.setOutputPrice(salesRecords.getOutputPrice());
         dto.setInputPrice(salesRecords.getInputPrice());
-        dto.setDate(DateTimeUtil.convertToLocalDateTime(salesRecords.getDate()));
+        dto.setDate(DateTimeUtil.convertToLocalDate(salesRecords.getDate()));
 
         return dto;
+    }
+
+    public static SalesRecords mapToSalesRecords(SalesRecordsDto dto){
+        SalesRecords salesRecords = new SalesRecords();
+
+        salesRecords.setId(dto.getId());
+        Product product = new Product();
+        if (dto.getProductName() != null){
+            product.setProductName(dto.getProductName().getProductName());
+            product.setProductType(dto.getProductTypeName());
+            product.setId(dto.getProductName().getId());
+            product.setDescription(dto.getProductName().getDescription());
+
+            salesRecords.setProduct(product);
+        }
+        salesRecords.setSalesman(dto.getSalesmanName());
+        salesRecords.setInputPrice(dto.getInputPrice());
+        salesRecords.setOutputPrice(dto.getOutputPrice());
+        salesRecords.setDate(DateTimeUtil.convertToDate(dto.getDate()));
+
+        return salesRecords;
     }
 }

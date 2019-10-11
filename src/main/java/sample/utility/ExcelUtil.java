@@ -1,5 +1,6 @@
 package sample.utility;
 
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -57,7 +58,9 @@ public class ExcelUtil<T> {
         if (file!=null){
             try (FileOutputStream outputStream = new FileOutputStream(file.getAbsolutePath())){
                 workbook.write(outputStream);
-                System.out.println("succesfully exported to excel file!");
+
+                AlertUtil.showAlert(Alert.AlertType.INFORMATION,"Хабар","Маълумотни ўтказиш","Статистикага оид маълумотлар эхcелга мувафаққиятли  ўтказилди!");
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {

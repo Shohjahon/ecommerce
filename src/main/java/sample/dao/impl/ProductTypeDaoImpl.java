@@ -26,7 +26,6 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
 
     @Override
     public ProductType findProductTypeByType(String type) throws Exception {
-        System.out.println("real product type due to saving ... " + type);
         ProductType productType = null;
         try (PreparedStatement statement = connection.prepareStatement(SELECT_BY_NAME_SQL)){
             connection.setAutoCommit(false);
@@ -42,7 +41,6 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
             connection.rollback();
             throw new Exception(ex.getMessage());
         }finally {
-            System.out.println("found product type by name: " + productType);
             connection.setAutoCommit(true);
             return productType;
         }

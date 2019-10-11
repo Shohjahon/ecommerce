@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -59,6 +61,15 @@ public class CreateProductController implements Initializable,DispatcherControll
             e.printStackTrace();
         }
         productTypesBox.setItems(list);
+
+//        productQuantityField.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                if (!newValue.matches("\\d*")){
+//                    productQuantityField.setText(newValue.replaceAll("[^\\d]", ""));
+//                }
+//            }
+//        });
     }
 
     @Override
@@ -77,7 +88,7 @@ public class CreateProductController implements Initializable,DispatcherControll
     }
 
     @Override
-    public void setMainBtns(JFXButton export, JFXButton deleteBtn) {
+    public void setMainBtns(JFXButton export, JFXButton deleteBtn,JFXButton brief_btn) {
 
     }
 
@@ -104,7 +115,6 @@ public class CreateProductController implements Initializable,DispatcherControll
     public void createProduct(){
         Product product = new Product();
         String selectedItem = (String) productTypesBox.getSelectionModel().getSelectedItem();
-        System.out.println("save product: selected item: "+selectedItem);
         final ProductType[] productType = new ProductType[1];
         productTypes.stream().forEach(productType1 -> {if (productType1.getProductType().equals(selectedItem)) {
             productType[0] =productType1;
@@ -116,7 +126,6 @@ public class CreateProductController implements Initializable,DispatcherControll
             product.setProductName(productName);
             product.setDescription(productDescription);
             product.setProductType(productType[0]);
-
             try {
                 productDao.insertProduct(product);
                 productController = ProductController.getInstance();

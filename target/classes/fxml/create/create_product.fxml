@@ -58,7 +58,7 @@
         <rowConstraints>
           <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="197.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот номи: " textFill="WHITE">
@@ -74,7 +74,7 @@
                   <Font name="Century Gothic" size="17.0" />
                </font>
             </JFXTextField>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури" textFill="WHITE" GridPane.rowIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Маҳсулот тури:" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font name="Century Gothic" size="17.0" />
                </font>
