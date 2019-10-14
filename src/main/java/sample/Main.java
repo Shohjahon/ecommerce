@@ -30,15 +30,19 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/fxml/index.fxml"));
         Parent root = loader.load();
+
         final Controller controller = loader.getController();
-        Scene scene = new Scene(root,1400,800);
+
+        int width = Toolkit.getDefaultToolkit().getScreenSize().width;
+        int height = Toolkit.getDefaultToolkit().getScreenSize().height;
+
+        Scene scene = new Scene(root,width - 150,height - 100);
         scene.getStylesheets().add(getClass().getResource("/style/styles.css").toExternalForm());
         StageStyle style = StageStyle.TRANSPARENT;
         primaryStage.setScene(scene);
         primaryStage.initStyle(style);
         controller.setStage(primaryStage,scene);
         primaryStage.show();
-        new FadeIn(root).play();
     }
 
     public static void main(String[] args) {

@@ -27,6 +27,7 @@ import sample.model.Product;
 import sample.model.SalesRecords;
 import sample.model.Salesman;
 import sample.model.Statistics;
+import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
 import sample.utility.DateTimeUtil;
 
@@ -251,6 +252,7 @@ public class BriefController implements Initializable{
             }
 
             this.statistics.getData().add(series);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -353,8 +355,21 @@ public class BriefController implements Initializable{
                 record = DatabaseUtil.getSalesRecordsDao().findSalesRecorById(recordId);
 
                 if (record != null){
+                    productList.addAll(DatabaseUtil.getProductDao().findAllProducts());
+                    product_box.setItems(productList);
 
-                    initChart(record.getProduct().getId());
+                    salesmanList.addAll(DatabaseUtil.getSalesmanDao().findAllSalesmans());
+                    salesman_box.setItems(salesmanList);
+
+                    if (record.getProduct() != null){
+                        initChart(record.getProduct().getId());
+
+                        product_box.getSelectionModel().select(record.getProduct());
+                    }
+
+                    if (record.getSalesman() != null){
+                        salesman_box.getSelectionModel().select(record.getSalesman());
+                    }
 
                     byte[] imageBody = record.getImageBody();
 
@@ -362,15 +377,6 @@ public class BriefController implements Initializable{
                         Image image = new Image(new ByteArrayInputStream(record.getImageBody()));
                         record_image.setImage(image);
                     }
-
-                    productList.addAll(DatabaseUtil.getProductDao().findAllProducts());
-                    salesmanList.addAll(DatabaseUtil.getSalesmanDao().findAllSalesmans());
-
-                    product_box.setItems(productList);
-                    salesman_box.setItems(salesmanList);
-
-                    product_box.getSelectionModel().select(record.getProduct());
-                    salesman_box.getSelectionModel().select(record.getSalesman());
 
                     TextFields.bindAutoCompletion(product_box.getEditor(),product_box.getItems());
                     TextFields.bindAutoCompletion(salesman_box.getEditor(),salesman_box.getItems());
@@ -383,9 +389,12 @@ public class BriefController implements Initializable{
                     createdDate.setValue(DateTimeUtil.convertToLocalDate(record.getDate()));
 
                     quantity.setText(String.valueOf(record.getQuantity()));
+                }else {
+                    AlertUtil.showAlert(Alert.AlertType.WARNING,"Диққат","Диққат","Илтимос! Юқоридагиларни тўлиқ киритинг! ");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+
             }
         }
     }
@@ -420,6 +429,7 @@ public class BriefController implements Initializable{
     }
 
     private void updateTask() throws Exception {
+        boolean isValidForm = true;
         int selectedProductIndex = product_box.getSelectionModel().getSelectedIndex();
         int selectedSaledmanIndex = salesman_box.getSelectionModel().getSelectedIndex();
         Product product = null;
@@ -427,18 +437,22 @@ public class BriefController implements Initializable{
 
         if (selectedProductIndex != -1){
             product = productList.get(selectedProductIndex);
-        }
+        }else isValidForm = false;
+
         if (selectedSaledmanIndex != -1){
             salesman = salesmanList.get(selectedSaledmanIndex);
-        }
+        }else isValidForm = false;
 
         if (record != null && product==null ){
+            isValidForm = true;
             product = record.getProduct();
         }
 
         if (record != null && salesman == null){
+            isValidForm = true;
             salesman = record.getSalesman();
         }
+
         if (product != null && salesman != null &&
                 !input_price.getText().isEmpty() && !selling_coeffitsient.getText().isEmpty()
                 && !quantity.getText().isEmpty() && !createdDate.getValue().toString().isEmpty()){
@@ -482,7 +496,7 @@ public class BriefController implements Initializable{
 
             Optional<ButtonType> result = confirmation.showAndWait();
 
-            if (result.get() == confirm){
+            if (result.get() == confirm && isValidForm){
                 DatabaseUtil.getSalesRecordsDao().updateSalesRecordFullyById(salesRecord);
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -495,6 +509,14 @@ public class BriefController implements Initializable{
 
                 SalesRecordsController.getInstace().populateSalesRecordsTable();
                 SalesRecordsController.getInstace().refreshFilter();
+            }else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Диққат");
+                alert.setHeaderText("Диққат");
+                alert.setContentText("Илтимос! Юқоридагиларни тўлиқ киритинг! ");
+                alert.initModality(Modality.APPLICATION_MODAL);
+                alert.initOwner(stage);
+                alert.showAndWait();
             }
         }
     }

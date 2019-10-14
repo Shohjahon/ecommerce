@@ -30,7 +30,10 @@ public interface Query {
             "id_salesman INTEGER,\n" +
             "input_price REAL,\n" +
             "output_price REAL,\n" +
-            "sold_date DATE,\n" +
+            "sold_date DATE," +
+            "sell_coefficent REAL DEFAULT 30," +
+            "image_body BLOB," +
+            "quantity INTEGER,\n" +
             "CONSTRAINT fk_id_product FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED,\n" +
             "CONSTRAINT fk_id_salesman FOREIGN KEY (id_salesman) REFERENCES salesman(id) ON DELETE CASCADE\n" +
             ");";

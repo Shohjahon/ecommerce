@@ -22,6 +22,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 import javafx.util.converter.DoubleStringConverter;
+import org.apache.log4j.Logger;
 import sample.dao.SalesRecordsDao;
 import sample.inteface.DispatcherController;
 import sample.model.Product;
@@ -34,8 +35,6 @@ import tornadofx.control.DatePickerTableCell;
 
 import java.io.IOException;
 import java.net.URL;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -77,10 +76,14 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     private ObservableList<Product> products = FXCollections.observableArrayList();
     private ObservableList<Salesman> salesmen = FXCollections.observableArrayList();
 
+    private Logger logger = Logger.getLogger(getClass());
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initComboList();
+
+        logger.info("inside initialize method");
 
         colDetailId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colDetailProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
@@ -145,7 +148,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 salesRecords = DatabaseUtil.getSalesRecordsDao().findSalesRecorById(record.getId());
                 salesRecords.setInputPrice(e.getNewValue());
             } catch (Exception e1) {
-                e1.printStackTrace();
+                logger.error("Error",e1);
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
@@ -162,7 +165,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 salesRecords = DatabaseUtil.getSalesRecordsDao().findSalesRecorById(record.getId());
                 salesRecords.setProduct(e.getNewValue());
             } catch (Exception e1) {
-                e1.printStackTrace();
+                logger.error("Error",e1);
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
@@ -179,7 +182,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 salesRecords = DatabaseUtil.getSalesRecordsDao().findSalesRecorById(record.getId());
                 salesRecords.setDate(DateTimeUtil.convertToDate(e.getNewValue()));
             } catch (Exception e1) {
-                e1.printStackTrace();
+                logger.error("Error",e1);
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
@@ -197,7 +200,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 salesRecords = DatabaseUtil.getSalesRecordsDao().findSalesRecorById(record.getId());
                 salesRecords.setSalesman(e.getNewValue());
             } catch (Exception e1) {
-                e1.printStackTrace();
+                logger.error("Error",e1);
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
@@ -282,6 +285,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                     try {
                         addRow();
                     } catch (Exception e) {
+                        logger.error("Error",e);
                         AlertUtil.showAlert(Alert.AlertType.ERROR,"Ҳатолик","Янги қатор қўшишда хатолик пайдо бўлди!","Ушбу муаммони йечиш учун дастур яратувчиси билан боғланинг! ");
                     }
                 }else if (pos.getRow() < sales_records_table.getItems().size() -1) {
@@ -298,15 +302,10 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
 
         sales_records_table.getSelectionModel().selectFirst();
 
+        logger.info("end of initialize method");
+
     }
 
-    private String formatToCurrencyStandard(double sum){
-        DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
-        symbols.setGroupingSeparator(',');
-        DecimalFormat formatter = new DecimalFormat("###,###,###.##",symbols);
-
-        return formatter.format(sum);
-    }
 
     private void initComboList(){
         try {
@@ -316,41 +315,30 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
             products.addAll(p);
             salesmen.addAll(s);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error",e);
         }
     }
 
     public void populateSalesRecordsTable(){
         list = FXCollections.observableArrayList();
 
+        logger.info("inside populateSalesRecords() method");
         try {
             List<SalesRecords> records = salesRecordsDao.findAllSalesRecords();
 
-           if (records != null) {
-               records.forEach(salesRecords -> {
-                   SalesRecordsDto dto = new SalesRecordsDto();
-                   dto.setId(salesRecords.getId());
-                   if (salesRecords.getSalesman()!=null){
-                       dto.setSalesmanName(salesRecords.getSalesman());
-                   }
-                   if (salesRecords.getProduct()!=null){
-                       if (salesRecords.getProduct().getProductType()!=null){
-                           dto.setProductTypeName(salesRecords.getProduct().getProductType());
-                       }
-                       dto.setProductName(salesRecords.getProduct());
-                   }
-                   dto.setInputPrice(salesRecords.getInputPrice());
-                   dto.setOutputPrice(salesRecords.getInputPrice() * ((100 + salesRecords.getSellingCoefficient()) / 100));
-                   if (salesRecords.getDate() != null){
-                       dto.setDate(DateTimeUtil.convertToLocalDate(salesRecords.getDate()));
-                   }
+           if (records != null ) {
+               if (records.size() != 0){
+                   fillList(records);
+               }else {
+                   addInitialRow(records);
+               }
 
-                   list.add(dto);
-               });
-
+           }else {
+               // create new record and add it to the model
+               addInitialRow(records);
            }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error",e);
             AlertUtil.showAlert(Alert.AlertType.ERROR,
                     "Хатолик",
                     "Хатолик юз берди! ",
@@ -358,6 +346,49 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                             "Илтимос дастур администратори билан боғланинг! ");
         }
         selectedRows.clear();
+
+        logger.debug("end of populateSalesRecord() method");
+    }
+
+    private void addInitialRow(List<SalesRecords> records) throws Exception {
+        // create new record and add it to the model
+        SalesRecordsDto data = new SalesRecordsDto();
+
+        data.setDate(LocalDate.now());
+
+        SalesRecords salesRecord = SalesRecordsDto.mapToSalesRecords(data);
+        salesRecord.setSellingCoefficient(30.0);
+
+        salesRecordsDao.insertSalesRecord(salesRecord);
+
+        records = salesRecordsDao.findAllSalesRecords();
+
+        if (records!=null){
+            fillList(records);
+        }
+    }
+
+    private void fillList(List<SalesRecords> records){
+        records.forEach(salesRecords -> {
+            SalesRecordsDto dto = new SalesRecordsDto();
+            dto.setId(salesRecords.getId());
+            if (salesRecords.getSalesman()!=null){
+                dto.setSalesmanName(salesRecords.getSalesman());
+            }
+            if (salesRecords.getProduct()!=null){
+                if (salesRecords.getProduct().getProductType()!=null){
+                    dto.setProductTypeName(salesRecords.getProduct().getProductType());
+                }
+                dto.setProductName(salesRecords.getProduct());
+            }
+            dto.setInputPrice(salesRecords.getInputPrice());
+            dto.setOutputPrice(salesRecords.getInputPrice() * ((100 + salesRecords.getSellingCoefficient()) / 100));
+            if (salesRecords.getDate() != null){
+                dto.setDate(DateTimeUtil.convertToLocalDate(salesRecords.getDate()));
+            }
+
+            list.add(dto);
+        });
     }
 
     public void addRow() throws Exception {
@@ -450,7 +481,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                         "Қуйидаги листдан ҳеч қандай элемент танланмаган,  Ҳисоботлардан бири ҳақида батафсил билиш учун,  қуйидагилардан фақат биттасини танланг! ");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Error",e);
         }
     }
 
@@ -473,7 +504,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 try {
                     salesRecordsDao.deleteSalesRecord((Integer) iterator.next());
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    logger.error("Error",e);
                 }
             }
 

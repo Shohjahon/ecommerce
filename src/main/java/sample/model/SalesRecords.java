@@ -1,5 +1,6 @@
 package sample.model;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -96,11 +97,13 @@ public class SalesRecords {
     @Override
     public String toString() {
         return "SalesRecords{" +
-                "product=" + product +
+                "id=" + id +
+                ", product=" + product +
                 ", salesman=" + salesman +
                 ", inputPrice=" + inputPrice +
                 ", outputPrice=" + outputPrice +
                 ", date=" + date +
+                ", imageBody=" + Arrays.toString(imageBody) +
                 ", quantity=" + quantity +
                 ", sellingCoefficient=" + sellingCoefficient +
                 '}';

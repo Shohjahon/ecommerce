@@ -51,9 +51,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
 
         <dependency>
@@ -160,7 +160,7 @@
                             <classPath>
                                 <mainClass>sample.Main</mainClass>
                             </classPath>
-                            <icon>src/main/resources/image/image.ico</icon>
+                            <icon>src/main/resources/image/favicon.ico</icon>
                             <jre>
                                 <minVersion>1.5.0</minVersion>
                                 <maxVersion>1.8.0</maxVersion>

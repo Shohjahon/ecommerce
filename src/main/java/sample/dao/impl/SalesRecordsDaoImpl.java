@@ -1,5 +1,6 @@
 package sample.dao.impl;
 
+import org.apache.log4j.Logger;
 import sample.dao.ProductDao;
 import sample.dao.SalesRecordsDao;
 import sample.dao.SalesmanDao;
@@ -34,6 +35,8 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
     private final String SELECT_ALL_SQL = "SELECT * FROM sales_records";
     private final String UPDATE_FULLY = "UPDATE sales_records SET id_product=?,id_salesman=?,input_price=?, sell_coefficent=?,sold_date=?,image_body=?,quantity=? WHERE  id=?";
     private final String UPDATE_IMAGE = "UPDATE sales_records SET image_body=? WHERE id=?";
+
+    private Logger logger = Logger.getLogger(getClass());
 
     public SalesRecordsDaoImpl(Connection connection) {
         this.connection = connection;
@@ -73,13 +76,15 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
 
     @Override
     public void insertSalesRecord(SalesRecords salesRecord) throws Exception {
+        logger.info("insertSalesRecord() -> salesRecord: " + salesRecord.toString());
+
         try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
             connection.setAutoCommit(false);
             if (salesRecord.getId() == 0){
                 statement.setInt(1,-1);
                 statement.setInt(2,-1);
                 statement.setDouble(3,0);
-                statement.setDouble(4,0);
+                statement.setDouble(4,30);
                 statement.setDate(5, new java.sql.Date(salesRecord.getDate().getTime()));
             }else {
                 statement.setInt(1,salesRecord.getProduct().getId());

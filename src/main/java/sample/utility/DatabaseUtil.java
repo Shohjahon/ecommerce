@@ -42,11 +42,6 @@ public class DatabaseUtil {
                 statement.executeUpdate(Query.create_product_type);
                 statement.executeUpdate(Query.create_product);
                 statement.executeUpdate(Query.create_sales_record);
-//                MysqlDataSource source = new MysqlDataSource();
-//                source.setURL("jdbc:mysql://localhost:3306/ecommerce");
-//                source.setUser("root");
-//                source.setPassword("1");
-//                connection = source.getConnection();
             } catch (SQLException e) {
                 Logger.getLogger(DatabaseUtil.class.getName()).log(Level.SEVERE,null,e);
             } catch (ClassNotFoundException e) {

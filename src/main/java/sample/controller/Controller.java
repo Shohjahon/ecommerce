@@ -4,6 +4,7 @@ import animatefx.animation.FadeIn;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,12 +17,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import sample.Main;
 import sample.inteface.DispatcherController;
 import sample.utility.AlertUtil;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
@@ -60,7 +61,7 @@ public class Controller  implements Initializable{
     private String selectedView;
     private DispatcherController dispatcherController;
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = Logger.getLogger(getClass());
 
 
     public void setStage(Stage stage, Scene scene){
@@ -182,7 +183,7 @@ public class Controller  implements Initializable{
 
     @FXML
     private void close(){
-        stage.close();
+        Platform.exit();
     }
 
     @Override
@@ -191,6 +192,11 @@ public class Controller  implements Initializable{
         loadProducts();
         delete_btn.setVisible(false);
         btnList = Arrays.asList(product_btn,prod_type_btn,salesman_btn,attachment_btn);
+
+        int width = Toolkit.getDefaultToolkit().getScreenSize().width;
+        int height = Toolkit.getDefaultToolkit().getScreenSize().height;
+
+        borderPane.setPrefSize(width - 150,height-100);
     }
 
 
