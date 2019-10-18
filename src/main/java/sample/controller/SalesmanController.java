@@ -4,13 +4,11 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -25,6 +23,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * Shoh Jahon tomonidan 7/26/2019 da qo'shilgan.
@@ -50,6 +50,8 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     private FilterUtil filterUtil;
     private JFXButton toExcelBtn;
     private ExcelUtil<SalesmanDto> excelUtil;
+    private Executor executor;
+    private ProgressIndicator progressIndicator;
 
     public SalesmanController(){
         INSTANCE = this;
@@ -57,6 +59,12 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        executor = Executors.newCachedThreadPool((runnable) ->{
+            Thread thread = new Thread(runnable);
+            thread.setDaemon(true);
+            return thread;
+        });
+
         colSalesmanId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colSalesmanName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
         colSalesmanPhone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
@@ -131,34 +139,48 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
 
         colSalesmanAction.setCellFactory(cellFactory);
         salesmanDao = DatabaseUtil.getSalesmanDao();
+
+        salesman_table.setItems(list);
+
         populateSalesmanTable();
+
     }
 
 
     public void populateSalesmanTable(){
         list = FXCollections.observableArrayList();
 
-        try {
-            List<Salesman> salesmen = salesmanDao.findAllSalesmans();
-            salesmen.stream().forEach(salesman -> {
-                SalesmanDto dto = new SalesmanDto();
-                dto.setId(salesman.getId());
-                dto.setFullName(salesman.getFullName());
-                dto.setPhoneNumber(salesman.getPhoneNumber());
-                dto.setAddress(salesman.getAddress());
+        Task<List<Salesman>> salesmanTask = new Task<List<Salesman>>() {
+            @Override
+            protected List<Salesman> call() throws Exception {
+                return salesmanDao.findAllSalesmans();
+            }
+        };
 
-                list.add(dto);
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-            AlertUtil.showAlert(Alert.AlertType.ERROR,
-                    "Хатолик",
-                    "Хатолик юз берди! ",
-                    "Дастур билан боғлиқ хатолик юз берди!  \n" +
-                            "Илтимос дастур администратори билан боғланинг! ");
-        }
+        salesmanTask.setOnFailed(e -> AlertUtil.showAlert(Alert.AlertType.ERROR,
+                "Хатолик",
+                "Хатолик юз берди! ",
+                "Дастур билан боғлиқ хатолик юз берди!  \n" +
+                        "Илтимос дастур администратори билан боғланинг! "));
 
-        salesman_table.setItems(list);
+        salesmanTask.setOnSucceeded(e -> {
+                    List<Salesman> salesmen = salesmanTask.getValue();
+
+                    salesmen.stream().forEach(salesman -> {
+                        SalesmanDto dto = new SalesmanDto();
+                        dto.setId(salesman.getId());
+                        dto.setFullName(salesman.getFullName());
+                        dto.setPhoneNumber(salesman.getPhoneNumber());
+                        dto.setAddress(salesman.getAddress());
+
+                        list.add(dto);
+                    });
+                });
+
+        executor.execute(salesmanTask);
+
+        salesman_table.setPlaceholder(progressIndicator);
+
     }
 
     @Override
@@ -189,7 +211,9 @@ public class SalesmanController implements Initializable,DispatcherController<Sa
     }
 
     public void refreshFilter(){
-        filterUtil = new FilterUtil(this.filterField,salesman_table,list);
+        if (filterUtil == null){
+            filterUtil = new FilterUtil(this.filterField,salesman_table,list);
+        }
         filterUtil.initFilter();
     }
 

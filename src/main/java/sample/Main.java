@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import sample.controller.Controller;
+import sample.model.SalesRecords;
+import sample.utility.DatabaseUtil;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

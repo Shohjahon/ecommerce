@@ -42,6 +42,9 @@ public class ValidationUtil {
                     int index = indexById(dto,list);
 
                     if (index != -1){
+
+                        dto.setOutputPrice(salesRecords.getInputPrice() * ((100 + salesRecords.getSellingCoefficient()) / 100));
+
                         list.set(index,dto);
                     }
             }

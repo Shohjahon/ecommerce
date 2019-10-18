@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ecommerce.db [2]">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="product_types"/>
+    <table id="4" parent="2" name="products"/>
+    <table id="5" parent="2" name="sales_records"/>
+    <table id="6" parent="2" name="salesman"/>
+    <table id="7" parent="2" name="sqlite_master"/>
+    <table id="8" parent="2" name="sqlite_sequence"/>
+    <column id="9" parent="3" name="id">
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="10" parent="3" name="product_type">
+      <Position>1</Position>
+      <DataType>VARCHAR(50)|0</DataType>
+    </column>
+    <key id="11" parent="3">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="12" parent="4" name="id">
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="13" parent="4" name="product_name">
+      <Position>1</Position>
+      <DataType>VARCHAR(100)|0</DataType>
+    </column>
+    <column id="14" parent="4" name="id_product_type">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="15" parent="4" name="description">
+      <Position>3</Position>
+      <DataType>VARCHAR(100)|0</DataType>
+    </column>
+    <key id="16" parent="4">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="17" parent="4" name="fk_product_key">
+      <ColNames>id_product_type</ColNames>
+      <RefTableName>product_types</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="18" parent="5" name="id">
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="5" name="id_product">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="20" parent="5" name="id_salesman">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="21" parent="5" name="input_price">
+      <Position>3</Position>
+      <DataType>REAL|0</DataType>
+    </column>
+    <column id="22" parent="5" name="output_price">
+      <Position>4</Position>
+      <DataType>REAL|0</DataType>
+    </column>
+    <column id="23" parent="5" name="sold_date">
+      <Position>5</Position>
+      <DataType>DATE|0</DataType>
+    </column>
+    <column id="24" parent="5" name="sell_coefficent">
+      <Position>6</Position>
+      <DataType>REAL|0</DataType>
+      <DefaultExpression>30</DefaultExpression>
+    </column>
+    <column id="25" parent="5" name="image_body">
+      <Position>7</Position>
+      <DataType>BLOB|0</DataType>
+    </column>
+    <column id="26" parent="5" name="quantity">
+      <Position>8</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <key id="27" parent="5">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="5" name="fk_id_product">
+      <ColNames>id_product</ColNames>
+      <RefTableName>products</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="29" parent="5" name="fk_id_salesman">
+      <ColNames>id_salesman</ColNames>
+      <RefTableName>salesman</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="30" parent="6" name="id">
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="6" name="full_name">
+      <Position>1</Position>
+      <DataType>VARCHAR(100)|0</DataType>
+    </column>
+    <column id="32" parent="6" name="phone_number">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|0</DataType>
+    </column>
+    <column id="33" parent="6" name="address">
+      <Position>3</Position>
+      <DataType>VARCHAR(100)|0</DataType>
+    </column>
+    <key id="34" parent="6">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="7" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="36" parent="7" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="37" parent="7" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="38" parent="7" name="rootpage">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="39" parent="7" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="40" parent="8" name="name">
+      <DataType>|0</DataType>
+    </column>
+    <column id="41" parent="8" name="seq">
+      <Position>1</Position>
+      <DataType>|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

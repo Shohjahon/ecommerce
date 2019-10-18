@@ -27,6 +27,7 @@ import sample.model.Product;
 import sample.model.SalesRecords;
 import sample.model.Salesman;
 import sample.model.Statistics;
+import sample.model.dto.SalesRecordsDto;
 import sample.utility.AlertUtil;
 import sample.utility.DatabaseUtil;
 import sample.utility.DateTimeUtil;
@@ -42,6 +43,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Shoh Jahon tomonidan 10/9/2019 da qo'shilgan.
@@ -96,12 +98,14 @@ public class BriefController implements Initializable{
     private final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
     private SalesRecords record;
     private Task<Void> updateTask;
+    private TableView<SalesRecordsDto> tableView;
 
 
-    public void setStage(Stage stage,Scene scene,Integer recordId){
+    public void setStage(Stage stage,Scene scene,Integer recordId,TableView tableView){
         this.stage = stage;
         this.scene = scene;
         this.recordId = recordId;
+        this.tableView = tableView;
 
         this.stage.setOnCloseRequest(e->{
             if (updateTask != null){
@@ -386,7 +390,9 @@ public class BriefController implements Initializable{
                     double sellCoeff = record.getSellingCoefficient();
                     selling_coeffitsient.setText(String.valueOf(sellCoeff));
 
-                    createdDate.setValue(DateTimeUtil.convertToLocalDate(record.getDate()));
+                    if (record.getDate() != null){
+                        createdDate.setValue(DateTimeUtil.convertToLocalDate(record.getDate()));
+                    }
 
                     quantity.setText(String.valueOf(record.getQuantity()));
                 }else {
@@ -411,6 +417,14 @@ public class BriefController implements Initializable{
                 Platform.runLater(() -> {
                     try {
                         updateTask();
+
+                        OptionalInt index = IntStream.range(0,tableView.getItems().size())
+                                .filter(i -> recordId == tableView.getItems().get(i).getId())
+                                .findFirst();
+
+                        index.ifPresent(i -> tableView.getSelectionModel().select(i));
+
+                        System.out.println(index + " : " + tableView.getItems().size());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

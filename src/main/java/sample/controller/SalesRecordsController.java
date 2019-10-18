@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
@@ -38,11 +40,13 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * Shoh Jahon tomonidan 7/26/2019 da qo'shilgan.
  */
-public class SalesRecordsController implements Initializable,DispatcherController<SalesRecordsDto> {
+public class SalesRecordsController implements Initializable,DispatcherController<SalesRecordsDto>{
     private Stage stage;
     @FXML
     private TableView<SalesRecordsDto> sales_records_table;
@@ -77,11 +81,21 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     private ObservableList<Salesman> salesmen = FXCollections.observableArrayList();
 
     private Logger logger = Logger.getLogger(getClass());
+    private Executor executor;
+    private ProgressIndicator progressIndicator;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initComboList();
+
+        progressIndicator = new ProgressIndicator();
+
+        executor = Executors.newCachedThreadPool((runnable) ->{
+            Thread thread = new Thread(runnable);
+            thread.setDaemon(true);
+            return thread;
+        });
 
         logger.info("inside initialize method");
 
@@ -153,8 +167,6 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
 
-            populateSalesRecordsTable();
-
             refreshFilter();
         });
 
@@ -169,8 +181,6 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
-
-            populateSalesRecordsTable();
 
             refreshFilter();
         });
@@ -187,8 +197,6 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
 
-            populateSalesRecordsTable();
-
             refreshFilter();
         });
 
@@ -204,8 +212,6 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
             }
 
             ValidationUtil.insertOrUpdate(salesRecords,list);
-
-            populateSalesRecordsTable();
 
             refreshFilter();
         });
@@ -322,29 +328,52 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
     public void populateSalesRecordsTable(){
         list = FXCollections.observableArrayList();
 
+        Task<List<SalesRecords>> salesTask = new Task<List<SalesRecords>>() {
+            @Override
+            protected List<SalesRecords> call() throws Exception {
+                return salesRecordsDao.findAllSalesRecords();
+            }
+        };
+
         logger.info("inside populateSalesRecords() method");
-        try {
-            List<SalesRecords> records = salesRecordsDao.findAllSalesRecords();
 
-           if (records != null ) {
-               if (records.size() != 0){
-                   fillList(records);
-               }else {
-                   addInitialRow(records);
-               }
-
-           }else {
-               // create new record and add it to the model
-               addInitialRow(records);
-           }
-        } catch (Exception e) {
-            logger.error("Error",e);
+        salesTask.setOnFailed(e -> {
+            logger.error("Error",salesTask.getException());
             AlertUtil.showAlert(Alert.AlertType.ERROR,
                     "Хатолик",
                     "Хатолик юз берди! ",
                     "Дастур билан боғлиқ хатолик юз берди!  \n" +
                             "Илтимос дастур администратори билан боғланинг! ");
-        }
+        });
+
+        salesTask.setOnSucceeded(e -> {
+            List<SalesRecords> salesRecords = salesTask.getValue();
+
+            if (salesRecords != null ) {
+                if (salesRecords.size() != 0){
+                    fillList(salesRecords);
+                }else {
+                    try {
+                        addInitialRow(salesRecords);
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
+                }
+
+            }else {
+                // create new record and add it to the model
+                try {
+                    addInitialRow(salesRecords);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
+
+        executor.execute(salesTask);
+
+        sales_records_table.setPlaceholder(progressIndicator);
+
         selectedRows.clear();
 
         logger.debug("end of populateSalesRecord() method");
@@ -404,9 +433,15 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
 
         data.setDate(LocalDate.now());
 
-        salesRecordsDao.insertSalesRecord(SalesRecordsDto.mapToSalesRecords(data));
+        int id = salesRecordsDao.insertSalesRecord(SalesRecordsDto.mapToSalesRecords(data));
 
-        populateSalesRecordsTable();
+//        populateSalesRecordsTable();
+
+        if (id != 0){
+            SalesRecords s = salesRecordsDao.findSalesRecorById(id);
+            data = SalesRecordsDto.mapToSalesRecordsDto(s);
+            list.add(data);
+        }
 
         refreshFilter();
 
@@ -472,9 +507,8 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
                 StageStyle style = StageStyle.TRANSPARENT;
                 Stage stage = new Stage(style);
                 stage.setScene(scene);
-                controller.setStage(stage,scene, (Integer) iterator.next());
-                stage.setAlwaysOnTop(true);
-                this.stage.setAlwaysOnTop(false);
+                controller.setStage(stage,scene, (Integer) iterator.next(),sales_records_table);
+                stage.initModality(Modality.WINDOW_MODAL);
                 stage.show();
             }else {
                 AlertUtil.showAlert(Alert.AlertType.WARNING,"Диққат","Хатолик! ",
@@ -494,7 +528,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
             return;
         }
 
-       boolean confirm = AlertUtil.showConfirmBox(Alert.AlertType.CONFIRMATION,
+        boolean confirm = AlertUtil.showConfirmBox(Alert.AlertType.CONFIRMATION,
                 "Ўчириш","Маҳсулотни ўчириш",
                 "Ушбу ID лари -> "+selectedRows+" бўлган маҳсулотни ўчиришни ҳоҳлайсизми?");
 
@@ -517,5 +551,7 @@ public class SalesRecordsController implements Initializable,DispatcherControlle
         filterUtil = new FilterUtil(this.filterField,sales_records_table,this.list);
         filterUtil.initFilter();
         filterUtil.setSelectedRowsAndClear(selectedRows);
+
+        sales_records_table.scrollTo(sales_records_table.getItems().size()-1);
     }
 }

@@ -13,7 +13,7 @@ public interface SalesRecordsDao {
 
     SalesRecords findSalesRecorById(Integer id) throws Exception;
 
-    void insertSalesRecord(SalesRecords salesRecord) throws Exception;
+    int insertSalesRecord(SalesRecords salesRecord) throws Exception;
 
     void deleteSalesRecord(Integer id) throws Exception;
 
@@ -26,4 +26,5 @@ public interface SalesRecordsDao {
     void uploadImageBySalesRecordId(File file,Integer id) throws Exception;
 
     List<Statistics> findMonthlyExpenseById(Integer id) throws Exception;
+
 }

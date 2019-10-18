@@ -1,10 +1,13 @@
 package sample.utility;
 
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.binding.Bindings;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.concurrent.Task;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.lang.reflect.Field;
@@ -13,7 +16,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -63,7 +69,7 @@ public class FilterUtil {
                             String fieldName = field.getName();
                             boolean isDate = fieldName.equals("date");
 
-                            if (isDate){
+                            if (isDate && !value.contains("null")){
                                 value = formatStringDate(value);
                                 if (value.toLowerCase().contains(lowerCaseFilter)) return true;
                             }else if (value.toLowerCase().contains(lowerCaseFilter)){

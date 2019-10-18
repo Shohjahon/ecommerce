@@ -125,12 +125,18 @@ public class SalesRecordsDto {
     public static SalesRecordsDto mapToSalesRecordsDto(SalesRecords salesRecords){
         SalesRecordsDto dto = new SalesRecordsDto();
         dto.setId(salesRecords.getId());
-        dto.setProductName(salesRecords.getProduct());
-        dto.setProductTypeName(salesRecords.getProduct().getProductType());
+        if (salesRecords.getProduct() != null){
+            dto.setProductName(salesRecords.getProduct());
+            dto.setProductTypeName(salesRecords.getProduct().getProductType());
+        }
         dto.setSalesmanName(salesRecords.getSalesman());
         dto.setOutputPrice(salesRecords.getOutputPrice());
         dto.setInputPrice(salesRecords.getInputPrice());
-        dto.setDate(DateTimeUtil.convertToLocalDate(salesRecords.getDate()));
+        if (salesRecords.getDate() != null){
+            dto.setDate(DateTimeUtil.convertToLocalDate(salesRecords.getDate()));
+        }else {
+            dto.setDate(DateTimeUtil.convertToLocalDate(new Date()));
+        }
 
         return dto;
     }

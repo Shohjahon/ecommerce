@@ -10,13 +10,10 @@ import sample.utility.DatabaseUtil;
 import sample.utility.DateTimeUtil;
 
 import javax.imageio.ImageIO;
-import javax.sql.rowset.serial.SerialBlob;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.sql.*;
-import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -32,7 +29,7 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
     private final String UPDATE_SQL = "UPDATE sales_records SET  id_product=?,id_salesman=?,input_price=?,sell_coefficent=?,sold_date=? WHERE id = ?";
     private final String DELETE_SQL = "DELETE FROM sales_records WHERE id = ?";
     private final String SELECT_ONE_SQL = "SELECT * FROM sales_records WHERE id = ?";
-    private final String SELECT_ALL_SQL = "SELECT * FROM sales_records";
+    private final String SELECT_ALL_SQL = "SELECT * FROM sales_records ORDER BY sold_date ASC ";
     private final String UPDATE_FULLY = "UPDATE sales_records SET id_product=?,id_salesman=?,input_price=?, sell_coefficent=?,sold_date=?,image_body=?,quantity=? WHERE  id=?";
     private final String UPDATE_IMAGE = "UPDATE sales_records SET image_body=? WHERE id=?";
 
@@ -75,10 +72,12 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
     }
 
     @Override
-    public void insertSalesRecord(SalesRecords salesRecord) throws Exception {
+    public int insertSalesRecord(SalesRecords salesRecord) throws Exception {
         logger.info("insertSalesRecord() -> salesRecord: " + salesRecord.toString());
 
-        try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL)) {
+        try(PreparedStatement statement = connection.prepareStatement(INSERT_SQL,
+                Statement.RETURN_GENERATED_KEYS)) {
+
             connection.setAutoCommit(false);
             if (salesRecord.getId() == 0){
                 statement.setInt(1,-1);
@@ -94,6 +93,12 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
                 statement.setDate(5, new java.sql.Date(salesRecord.getDate().getTime()));
             }
             statement.executeUpdate();
+
+            try (ResultSet generatedKeys = statement.getGeneratedKeys()){
+                if (generatedKeys.next()){
+                    return generatedKeys.getInt(1);
+                }
+            }
             connection.commit();
         }catch (SQLException ex){
             connection.rollback();
@@ -101,6 +106,7 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
         }finally {
             connection.setAutoCommit(true);
         }
+        return 0;
     }
 
     @Override
@@ -136,7 +142,11 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
             }
             statement.setDouble(3,salesRecord.getInputPrice());
             statement.setDouble(4,salesRecord.getSellingCoefficient());
-            statement.setDate(5,new java.sql.Date(salesRecord.getDate().getTime()));
+            if (salesRecord.getDate() != null){
+                statement.setDate(5,new java.sql.Date(salesRecord.getDate().getTime()));
+            }else {
+                statement.setDate(5,new java.sql.Date(new java.util.Date().getTime()));
+            }
             statement.setInt(6,salesRecord.getId());
 
             statement.executeUpdate();
@@ -253,15 +263,20 @@ public class SalesRecordsDaoImpl implements SalesRecordsDao {
         List<SalesRecords> salesRecords = findAllSalesRecords();
 
         salesRecords.forEach(salesRecord -> {
-            LocalDate recordDate = DateTimeUtil.convertToLocalDate(salesRecord.getDate());
 
-            if (recordDate.isAfter(monthBefore) && recordDate.isBefore(now) && id == salesRecord.getProduct().getId()){
-                Statistics statistic = new Statistics();
-                statistic.setSpentMoney(salesRecord.getQuantity() * salesRecord.getInputPrice());
-                statistic.setDate(salesRecord.getDate());
 
-                statistics.add(statistic);
+            if (salesRecord.getDate()!= null && salesRecord.getProduct() != null){
+                LocalDate recordDate = DateTimeUtil.convertToLocalDate(salesRecord.getDate());
+
+                if (recordDate.isAfter(monthBefore) && recordDate.isBefore(now) && id == salesRecord.getProduct().getId()){
+                    Statistics statistic = new Statistics();
+                    statistic.setSpentMoney(salesRecord.getQuantity() * salesRecord.getInputPrice());
+                    statistic.setDate(salesRecord.getDate());
+
+                    statistics.add(statistic);
+                }
             }
+
         });
 
         return statistics;
